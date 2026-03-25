@@ -176,7 +176,7 @@ export const HomePage = () => {
                 <Link
                   href="#services"
                   fontFamily="mono"
-                  fontSize="0.68rem"
+                  fontSize="xs"
                   letterSpacing="0.14em"
                   textTransform="uppercase"
                   color="rgba(250,251,252,0.5)"
@@ -188,7 +188,7 @@ export const HomePage = () => {
                 <Link
                   href="#about"
                   fontFamily="mono"
-                  fontSize="0.68rem"
+                  fontSize="xs"
                   letterSpacing="0.14em"
                   textTransform="uppercase"
                   color="rgba(250,251,252,0.5)"
@@ -200,7 +200,7 @@ export const HomePage = () => {
                 <Link
                   href="#capabilities"
                   fontFamily="mono"
-                  fontSize="0.68rem"
+                  fontSize="xs"
                   letterSpacing="0.14em"
                   textTransform="uppercase"
                   color="rgba(250,251,252,0.5)"
@@ -214,7 +214,7 @@ export const HomePage = () => {
                   bg="blue.500"
                   color="white"
                   fontFamily="mono"
-                  fontSize="0.68rem"
+                  fontSize="xs"
                   letterSpacing="0.14em"
                   textTransform="uppercase"
                   px="1.2rem"
