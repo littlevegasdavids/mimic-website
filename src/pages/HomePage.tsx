@@ -14,7 +14,10 @@ import {
   IconButton,
   useBreakpointValue,
   Link,
+  Menu,
+  Portal,
 } from "@chakra-ui/react";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 // CSS animations
 const marqueeAnimation = "marquee 26s linear infinite";
@@ -120,7 +123,7 @@ const M1ProIcon = () => (
 
 export const HomePage = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
-
+  
   return (
     <Box>
       {/* Nar Bar */}
@@ -170,9 +173,8 @@ export const HomePage = () => {
 
             {!isMobile && (
               <HStack gap="2rem">
-                <Text
-                  as="a"
-                  //href="#services"
+                <Link
+                  href="#services"
                   fontFamily="mono"
                   fontSize="0.68rem"
                   letterSpacing="0.14em"
@@ -182,10 +184,9 @@ export const HomePage = () => {
                   transition="color 0.32s cubic-bezier(0.4,0,0.2,1)"
                 >
                   Services
-                </Text>
-                <Text
-                  as="a"
-                  //href="#about"
+                </Link>
+                <Link
+                  href="#about"
                   fontFamily="mono"
                   fontSize="0.68rem"
                   letterSpacing="0.14em"
@@ -195,10 +196,9 @@ export const HomePage = () => {
                   transition="color 0.32s cubic-bezier(0.4,0,0.2,1)"
                 >
                   About
-                </Text>
-                <Text
-                  as="a"
-                  //href="#capabilities"
+                </Link>
+                <Link
+                  href="#capabilities"
                   fontFamily="mono"
                   fontSize="0.68rem"
                   letterSpacing="0.14em"
@@ -208,10 +208,9 @@ export const HomePage = () => {
                   transition="color 0.32s cubic-bezier(0.4,0,0.2,1)"
                 >
                   Capabilities
-                </Text>
-                <Button
-                  as="a"
-                  //href="#contact"
+                </Link>
+                <Link
+                  href="#contact"
                   bg="blue.500"
                   color="white"
                   fontFamily="mono"
@@ -223,32 +222,117 @@ export const HomePage = () => {
                   borderRadius="3px"
                   _hover={{ bg: "blue.600" }}
                   transition="background 0.32s cubic-bezier(0.4,0,0.2,1)"
+                  display="inline-flex"
+                  alignItems="center"
+                  textDecoration="none"
                 >
                   Get a Quote
-                </Button>
+                </Link>
               </HStack>
             )}
-            {/* Mobile Nav Bar */}
             {isMobile && (
-              <IconButton
-                aria-label="Menu"
-                variant="ghost"
-                color="white"
-                size="sm"
-              >
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <line x1="3" y1="6" x2="21" y2="6" />
-                  <line x1="3" y1="12" x2="21" y2="12" />
-                  <line x1="3" y1="18" x2="21" y2="18" />
-                </svg>
-              </IconButton>
+              <Menu.Root size="md">
+                <Menu.Trigger>
+                  <IconButton bg="transparent" color="white" size="lg">
+                    <GiHamburgerMenu />
+                  </IconButton>
+                </Menu.Trigger>
+                <Portal>
+                  <Menu.Positioner>
+                    <Menu.Content
+                      gap="4"
+                      minW="200px"
+                      p="4"
+                      bg="grey.900"
+                      border="1px solid rgba(74,127,165,0.3)"
+                      borderRadius="8px"
+                      boxShadow="0 10px 25px rgba(0,0,0,0.4)"
+                    >
+                      <Menu.Item
+                        value="services"
+                        p="3"
+                        borderRadius="4px"
+                        _hover={{ bg: "rgba(74,127,165,0.2)" }}
+                        fontSize="0.9rem"
+                        fontFamily="mono"
+                        letterSpacing="0.1em"
+                        textTransform="uppercase"
+                      >
+                        <Link
+                          href="#services"
+                          color="rgba(250,251,252,0.8)"
+                          _hover={{ color: "blue.300", textDecoration: "none" }}
+                          w="100%"
+                          display="block"
+                        >
+                          Services
+                        </Link>
+                      </Menu.Item>
+                      <Menu.Item
+                        value="about"
+                        p="3"
+                        borderRadius="4px"
+                        _hover={{ bg: "rgba(74,127,165,0.2)" }}
+                        fontSize="0.9rem"
+                        fontFamily="mono"
+                        letterSpacing="0.1em"
+                        textTransform="uppercase"
+                      >
+                        <Link
+                          href="#about"
+                          color="rgba(250,251,252,0.8)"
+                          _hover={{ color: "blue.300", textDecoration: "none" }}
+                          w="100%"
+                          display="block"
+                        >
+                          About
+                        </Link>
+                      </Menu.Item>
+                      <Menu.Item
+                        value="capabilities"
+                        p="3"
+                        borderRadius="4px"
+                        _hover={{ bg: "rgba(74,127,165,0.2)" }}
+                        fontSize="0.9rem"
+                        fontFamily="mono"
+                        letterSpacing="0.1em"
+                        textTransform="uppercase"
+                      >
+                        <Link
+                          href="#capabilities"
+                          color="rgba(250,251,252,0.8)"
+                          _hover={{ color: "blue.300", textDecoration: "none" }}
+                          w="100%"
+                          display="block"
+                        >
+                          Capabilities
+                        </Link>
+                      </Menu.Item>
+                      <Menu.Item
+                        value="contact"
+                        p="3"
+                        borderRadius="4px"
+                        _hover={{ bg: "blue.500" }}
+                        fontSize="0.9rem"
+                        fontFamily="mono"
+                        letterSpacing="0.1em"
+                        textTransform="uppercase"
+                        bg="rgba(74,127,165,0.1)"
+                      >
+                        <Link
+                          href="#contact"
+                          color="blue.300"
+                          _hover={{ color: "white", textDecoration: "none" }}
+                          w="100%"
+                          display="block"
+                        >
+                          Get a Quote
+                        </Link>
+                      </Menu.Item>
+                    </Menu.Content>
+                  </Menu.Positioner>
+                </Portal>
+              </Menu.Root>
             )}
           </Flex>
         </Container>
