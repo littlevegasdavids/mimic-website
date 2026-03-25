@@ -13,6 +13,7 @@ import {
   Textarea,
   IconButton,
   useBreakpointValue,
+  Link,
 } from "@chakra-ui/react";
 
 // CSS animations
@@ -756,128 +757,57 @@ export const HomePage = () => {
               gap="2rem"
               mb="2rem"
             >
-            {/* Service - Mimic Panels */}
-            <Flex
-              bg="white"
-              p="2.5rem 2.25rem"
-              position="relative"
-              borderRadius="12px"
-              border="1px solid"
-              borderColor="gray.200"
-              boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-              _hover={{
-                bg: "blue.50",
-                borderColor: "blue.300",
-                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                transform: "translateY(-4px)",
-              }}
-              transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
-              gap="3"
-              direction="column"
-            >
-              <Flex align="center" gap="1rem" mb="0.7rem">
-                <Box
-                  w="38px"
-                  h="38px"
-                  color="grey.600"
-                >
-                  <PanelIcon />
-                </Box>
-                <Heading
-                  fontFamily="heading"
-                  fontSize="1.45rem"
-                  letterSpacing="0.07em"
-                  color="blue.600"
-                >
-                  MIMIC PANELS
-                </Heading>
-              </Flex>
-              <Text
-                fontSize="0.855rem"
-                color="grey.600"
-                lineHeight="1.75"
-                fontWeight="300"
-                fontStyle="italic"
+              {/* Service - Mimic Panels */}
+              <Flex
+                bg="white"
+                p="2.5rem 2.25rem"
+                position="relative"
+                borderRadius="12px"
+                border="1px solid"
+                borderColor="gray.200"
+                boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+                _hover={{
+                  bg: "blue.50",
+                  borderColor: "blue.300",
+                  boxShadow:
+                    "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                  transform: "translateY(-4px)",
+                }}
+                transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
+                gap="3"
+                direction="column"
               >
-                Mosaic-system panels built on polycarbonate glass-filled fibre
-                tiles. UV stable, shock resistant modules in 18×18mm, 24×24mm
-                and 48×48mm sizes — light grey or black standard.
-              </Text>
-              <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
-                {[
-                  "Mosaic Tiles",
-                  "Grid Systems",
-                  "Push Buttons",
-                  "LED Mounting",
-                ].map((pill) => (
-                  <Text
-                    key={pill}
-                    fontFamily="mono"
-                    fontSize="0.58rem"
-                    letterSpacing="0.1em"
-                    textTransform="uppercase"
-                    bg="grey.100"
-                    color="grey.600"
-                    px="0.6rem"
-                    py="0.22rem"
-                    borderRadius="2px"
+                <Flex align="center" gap="1rem" mb="0.7rem">
+                  <Box w="38px" h="38px" color="grey.600">
+                    <PanelIcon />
+                  </Box>
+                  <Heading
+                    fontFamily="heading"
+                    fontSize="1.45rem"
+                    letterSpacing="0.07em"
+                    color="blue.600"
                   >
-                    {pill}
-                  </Text>
-                ))}
-              </HStack>
-            </Flex>
-
-            {/* Service - Engraving */}
-            <Flex
-              bg="white"
-              p="2.5rem 2.25rem"
-              position="relative"
-              borderRadius="12px"
-              border="1px solid"
-              borderColor="gray.200"
-              boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-              _hover={{
-                bg: "blue.50",
-                borderColor: "blue.300",
-                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                transform: "translateY(-4px)",
-              }}
-              transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
-              gap="3"
-              direction="column"
-            >
-              <Flex align="center" gap="1rem" mb="0.7rem">
-                <Box
-                  w="38px"
-                  h="38px"
+                    MIMIC PANELS
+                  </Heading>
+                </Flex>
+                <Text
+                  fontSize="0.855rem"
                   color="grey.600"
+                  lineHeight="1.75"
+                  fontWeight="300"
+                  fontStyle="italic"
                 >
-                  <EngravingIcon />
-                </Box>
-                <Heading
-                  fontFamily="heading"
-                  fontSize="1.45rem"
-                  letterSpacing="0.07em"
-                  color="blue.600"
-                >
-                  ENGRAVING
-                </Heading>
-              </Flex>
-              <Text
-                fontSize="0.855rem"
-                color="grey.600"
-                lineHeight="1.75"
-                fontWeight="300"
-                fontStyle="italic"
-              >
-                Industrial engraving via computerised rotary, laser surface and
-                manual machines. Control panels, commemorative plaques, valve
-                tags, machine diagrams — anything requiring precision marking.
-              </Text>
-              <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
-                {["Rotary", "Laser Surface", "Plaques", "Badges"].map(
-                  (pill) => (
+                  Mosaic-system panels built on polycarbonate glass-filled fibre
+                  tiles. UV stable, shock resistant modules in 18×18mm, 24×24mm
+                  and 48×48mm sizes — light grey or black standard.
+                </Text>
+                <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
+                  {[
+                    "Mosaic Tiles",
+                    "Grid Systems",
+                    "Push Buttons",
+                    "LED Mounting",
+                  ].map((pill) => (
                     <Text
                       key={pill}
                       fontFamily="mono"
@@ -892,79 +822,142 @@ export const HomePage = () => {
                     >
                       {pill}
                     </Text>
-                  ),
-                )}
-              </HStack>
-            </Flex>
-
-            {/* Service - Signage */}
-            <Flex
-              bg="white"
-              p="2.5rem 2.25rem"
-              position="relative"
-              borderRadius="12px"
-              border="1px solid"
-              borderColor="gray.200"
-              boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-              _hover={{
-                bg: "blue.50",
-                borderColor: "blue.300",
-                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                transform: "translateY(-4px)",
-              }}
-              transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
-              gap="3"
-              direction="column"
-            >
-              <Flex align="center" gap="1rem" mb="0.7rem">
-                <Box
-                  w="38px"
-                  h="38px"
-                  color="grey.600"
-                >
-                  <SignageIcon />
-                </Box>
-                <Heading
-                  fontFamily="heading"
-                  fontSize="1.45rem"
-                  letterSpacing="0.07em"
-                  color="blue.600"
-                >
-                  SIGNAGE
-                </Heading>
+                  ))}
+                </HStack>
               </Flex>
-              <Text
-                fontSize="0.855rem"
-                color="grey.600"
-                lineHeight="1.75"
-                fontWeight="300"
-                fontStyle="italic"
+
+              {/* Service - Engraving */}
+              <Flex
+                bg="white"
+                p="2.5rem 2.25rem"
+                position="relative"
+                borderRadius="12px"
+                border="1px solid"
+                borderColor="gray.200"
+                boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+                _hover={{
+                  bg: "blue.50",
+                  borderColor: "blue.300",
+                  boxShadow:
+                    "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                  transform: "translateY(-4px)",
+                }}
+                transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
+                gap="3"
+                direction="column"
               >
-                Custom corporate and industrial signage — cut-out letters,
-                sandblasted glass, light boxes, illuminated letters and
-                directional systems tailored to your brand and environment.
-              </Text>
-              <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
-                {["Cut-Out", "Sandblast", "Light Boxes", "Directional"].map(
-                  (pill) => (
-                    <Text
-                      key={pill}
-                      fontFamily="mono"
-                      fontSize="0.58rem"
-                      letterSpacing="0.1em"
-                      textTransform="uppercase"
-                      bg="grey.100"
-                      color="grey.600"
-                      px="0.6rem"
-                      py="0.22rem"
-                      borderRadius="2px"
-                    >
-                      {pill}
-                    </Text>
-                  ),
-                )}
-              </HStack>
-            </Flex>
+                <Flex align="center" gap="1rem" mb="0.7rem">
+                  <Box w="38px" h="38px" color="grey.600">
+                    <EngravingIcon />
+                  </Box>
+                  <Heading
+                    fontFamily="heading"
+                    fontSize="1.45rem"
+                    letterSpacing="0.07em"
+                    color="blue.600"
+                  >
+                    ENGRAVING
+                  </Heading>
+                </Flex>
+                <Text
+                  fontSize="0.855rem"
+                  color="grey.600"
+                  lineHeight="1.75"
+                  fontWeight="300"
+                  fontStyle="italic"
+                >
+                  Industrial engraving via computerised rotary, laser surface
+                  and manual machines. Control panels, commemorative plaques,
+                  valve tags, machine diagrams — anything requiring precision
+                  marking.
+                </Text>
+                <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
+                  {["Rotary", "Laser Surface", "Plaques", "Badges"].map(
+                    (pill) => (
+                      <Text
+                        key={pill}
+                        fontFamily="mono"
+                        fontSize="0.58rem"
+                        letterSpacing="0.1em"
+                        textTransform="uppercase"
+                        bg="grey.100"
+                        color="grey.600"
+                        px="0.6rem"
+                        py="0.22rem"
+                        borderRadius="2px"
+                      >
+                        {pill}
+                      </Text>
+                    ),
+                  )}
+                </HStack>
+              </Flex>
+
+              {/* Service - Signage */}
+              <Flex
+                bg="white"
+                p="2.5rem 2.25rem"
+                position="relative"
+                borderRadius="12px"
+                border="1px solid"
+                borderColor="gray.200"
+                boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+                _hover={{
+                  bg: "blue.50",
+                  borderColor: "blue.300",
+                  boxShadow:
+                    "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                  transform: "translateY(-4px)",
+                }}
+                transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
+                gap="3"
+                direction="column"
+              >
+                <Flex align="center" gap="1rem" mb="0.7rem">
+                  <Box w="38px" h="38px" color="grey.600">
+                    <SignageIcon />
+                  </Box>
+                  <Heading
+                    fontFamily="heading"
+                    fontSize="1.45rem"
+                    letterSpacing="0.07em"
+                    color="blue.600"
+                  >
+                    SIGNAGE
+                  </Heading>
+                </Flex>
+                <Text
+                  fontSize="0.855rem"
+                  color="grey.600"
+                  lineHeight="1.75"
+                  fontWeight="300"
+                  fontStyle="italic"
+                >
+                  Custom corporate and industrial signage — cut-out letters,
+                  sandblasted glass, light boxes, illuminated letters and
+                  directional systems tailored to your brand and environment.
+                </Text>
+                <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
+                  {["Cut-Out", "Sandblast", "Light Boxes", "Directional"].map(
+                    (pill) => (
+                      <Text
+                        key={pill}
+                        fontFamily="mono"
+                        fontSize="0.58rem"
+                        letterSpacing="0.1em"
+                        textTransform="uppercase"
+                        bg="grey.100"
+                        color="grey.600"
+                        px="0.6rem"
+                        py="0.22rem"
+                        borderRadius="2px"
+                      >
+                        {pill}
+                      </Text>
+                    ),
+                  )}
+                </HStack>
+              </Flex>
             </Grid>
 
             {/* Last 2 services - centered on desktop */}
@@ -979,146 +972,141 @@ export const HomePage = () => {
               maxW={{ lg: "800px" }}
               mx="auto"
             >
-
-            {/* Service - 3D Printing */}
-            <Flex
-              bg="white"
-              p="2.5rem 2.25rem"
-              position="relative"
-              borderRadius="12px"
-              border="1px solid"
-              borderColor="gray.200"
-              boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-              _hover={{
-                bg: "blue.50",
-                borderColor: "blue.300",
-                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                transform: "translateY(-4px)",
-              }}
-              transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
-              gap="3"
-              direction="column"
-            >
-              <Flex align="center" gap="1rem" mb="0.7rem">
-                <Box
-                  w="38px"
-                  h="38px"
-                  color="grey.600"
-                >
-                  <PrintingIcon />
-                </Box>
-                <Heading
-                  fontFamily="heading"
-                  fontSize="1.45rem"
-                  letterSpacing="0.07em"
-                  color="blue.600"
-                >
-                  3D PRINTING
-                </Heading>
-              </Flex>
-              <Text
-                fontSize="0.855rem"
-                color="grey.600"
-                lineHeight="1.75"
-                fontWeight="300"
-                fontStyle="italic"
+              {/* Service - 3D Printing */}
+              <Flex
+                bg="white"
+                p="2.5rem 2.25rem"
+                position="relative"
+                borderRadius="12px"
+                border="1px solid"
+                borderColor="gray.200"
+                boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+                _hover={{
+                  bg: "blue.50",
+                  borderColor: "blue.300",
+                  boxShadow:
+                    "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                  transform: "translateY(-4px)",
+                }}
+                transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
+                gap="3"
+                direction="column"
               >
-                Professional 3D printing for prototypes, industrial components
-                and custom parts. High-resolution output in a range of materials
-                suited to commercial and engineering requirements.
-              </Text>
-              <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
-                {["Prototypes", "Components", "Custom Parts"].map((pill) => (
-                  <Text
-                    key={pill}
-                    fontFamily="mono"
-                    fontSize="0.58rem"
-                    letterSpacing="0.1em"
-                    textTransform="uppercase"
-                    bg="grey.100"
-                    color="grey.600"
-                    px="0.6rem"
-                    py="0.22rem"
-                    borderRadius="2px"
+                <Flex align="center" gap="1rem" mb="0.7rem">
+                  <Box w="38px" h="38px" color="grey.600">
+                    <PrintingIcon />
+                  </Box>
+                  <Heading
+                    fontFamily="heading"
+                    fontSize="1.45rem"
+                    letterSpacing="0.07em"
+                    color="blue.600"
                   >
-                    {pill}
-                  </Text>
-                ))}
-              </HStack>
-            </Flex>
-
-            {/* Service - M1 Pro Printing */}
-            <Flex
-              bg="white"
-              p="2.5rem 2.25rem"
-              position="relative"
-              borderRadius="12px"
-              border="1px solid"
-              borderColor="gray.200"
-              boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-              _hover={{
-                bg: "blue.50",
-                borderColor: "blue.300",
-                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                transform: "translateY(-4px)",
-              }}
-              transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
-              gap="3"
-              direction="column"
-            >
-              <Flex align="center" gap="1rem" mb="0.7rem">
-                <Box
-                  w="38px"
-                  h="38px"
+                    3D PRINTING
+                  </Heading>
+                </Flex>
+                <Text
+                  fontSize="0.855rem"
                   color="grey.600"
+                  lineHeight="1.75"
+                  fontWeight="300"
+                  fontStyle="italic"
                 >
-                  <M1ProIcon />
-                </Box>
-                <Heading
-                  fontFamily="heading"
-                  fontSize="1.45rem"
-                  letterSpacing="0.07em"
-                  color="blue.600"
-                >
-                  M1 PRO PRINTING
-                </Heading>
+                  Professional 3D printing for prototypes, industrial components
+                  and custom parts. High-resolution output in a range of
+                  materials suited to commercial and engineering requirements.
+                </Text>
+                <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
+                  {["Prototypes", "Components", "Custom Parts"].map((pill) => (
+                    <Text
+                      key={pill}
+                      fontFamily="mono"
+                      fontSize="0.58rem"
+                      letterSpacing="0.1em"
+                      textTransform="uppercase"
+                      bg="grey.100"
+                      color="grey.600"
+                      px="0.6rem"
+                      py="0.22rem"
+                      borderRadius="2px"
+                    >
+                      {pill}
+                    </Text>
+                  ))}
+                </HStack>
               </Flex>
-              <Text
-                fontSize="0.855rem"
-                color="grey.600"
-                lineHeight="1.75"
-                fontWeight="300"
-                fontStyle="italic"
+
+              {/* Service - M1 Pro Printing */}
+              <Flex
+                bg="white"
+                p="2.5rem 2.25rem"
+                position="relative"
+                borderRadius="12px"
+                border="1px solid"
+                borderColor="gray.200"
+                boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+                _hover={{
+                  bg: "blue.50",
+                  borderColor: "blue.300",
+                  boxShadow:
+                    "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                  transform: "translateY(-4px)",
+                }}
+                transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
+                gap="3"
+                direction="column"
               >
-                High-quality M1 Pro output with a full range of consumables.
-                Ideal for instrument panel labels, overlays and
-                precision-printed materials across industrial and commercial
-                sectors.
-              </Text>
-              <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
-                {["Labels", "Overlays", "Consumables", "Panels"].map((pill) => (
-                  <Text
-                    key={pill}
-                    fontFamily="mono"
-                    fontSize="0.58rem"
-                    letterSpacing="0.1em"
-                    textTransform="uppercase"
-                    bg="grey.100"
-                    color="grey.600"
-                    px="0.6rem"
-                    py="0.22rem"
-                    borderRadius="2px"
+                <Flex align="center" gap="1rem" mb="0.7rem">
+                  <Box w="38px" h="38px" color="grey.600">
+                    <M1ProIcon />
+                  </Box>
+                  <Heading
+                    fontFamily="heading"
+                    fontSize="1.45rem"
+                    letterSpacing="0.07em"
+                    color="blue.600"
                   >
-                    {pill}
-                  </Text>
-                ))}
-              </HStack>
-            </Flex>
+                    M1 PRO PRINTING
+                  </Heading>
+                </Flex>
+                <Text
+                  fontSize="0.855rem"
+                  color="grey.600"
+                  lineHeight="1.75"
+                  fontWeight="300"
+                  fontStyle="italic"
+                >
+                  High-quality M1 Pro output with a full range of consumables.
+                  Ideal for instrument panel labels, overlays and
+                  precision-printed materials across industrial and commercial
+                  sectors.
+                </Text>
+                <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
+                  {["Labels", "Overlays", "Consumables", "Panels"].map(
+                    (pill) => (
+                      <Text
+                        key={pill}
+                        fontFamily="mono"
+                        fontSize="0.58rem"
+                        letterSpacing="0.1em"
+                        textTransform="uppercase"
+                        bg="grey.100"
+                        color="grey.600"
+                        px="0.6rem"
+                        py="0.22rem"
+                        borderRadius="2px"
+                      >
+                        {pill}
+                      </Text>
+                    ),
+                  )}
+                </HStack>
+              </Flex>
             </Grid>
           </Box>
 
-            {/* CTA Card */}
-            {/* <Box
+          {/* CTA Card */}
+          {/* <Box
               bg="blue.900"
               p="2.5rem 2.25rem"
               display="flex"
@@ -1678,6 +1666,43 @@ export const HomePage = () => {
                 our team in Greenside, Johannesburg.
               </Text>
 
+              {/* WhatsApp Button */}
+              <Link
+                href="https://wa.me/270723421357?text=Hi%2C%20I%27m%20interested%20in%20your%20engraving%20services"
+                target="_blank"
+                rel="noopener noreferrer"
+                bg="green.500"
+                color="white"
+                fontFamily="mono"
+                fontSize="0.7rem"
+                letterSpacing="0.14em"
+                textTransform="uppercase"
+                px="2rem"
+                py="0.9rem"
+                borderRadius="6px"
+                _hover={{
+                  bg: "green.600",
+                  transform: "translateY(-2px)",
+                  boxShadow: "0 8px 25px rgba(72, 187, 120, 0.3)",
+                }}
+                transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
+                display="inline-flex"
+                alignItems="center"
+                gap="0.75rem"
+                textDecoration="none"
+                w="fit-content"
+                mb="2.5rem"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488z" />
+                </svg>
+                Chat on WhatsApp
+              </Link>
               <VStack gap="1.25rem" align="stretch">
                 {[
                   {
@@ -1971,61 +1996,13 @@ export const HomePage = () => {
         <Container maxW="1200px">
           <Text
             fontFamily="mono"
-            fontSize="0.58rem"
+            fontSize="xs"
             letterSpacing="0.1em"
             color="rgba(250,251,252,0.2)"
             textAlign="center"
           >
             Mimic & Engraving Services CC. · Johannesburg, South Africa
           </Text>
-          {/* <Flex
-            align="center"
-            justify="space-between"
-            flexWrap="wrap"
-            gap="1rem"
-            direction={{ base: "column", md: "row" }}
-            textAlign={{ base: "center", md: "left" }}
-          >
-            <Flex align="center" gap="0.75rem">
-              <Image
-                src={logoImage}
-                alt="Mimic Engraving"
-                h="45px"
-              />
-            </Flex>
-
-            <HStack
-              gap="2rem"
-              justify={{ base: "center", md: "flex-start" }}
-              flexWrap="wrap"
-            >
-              {["Services", "About", "Capabilities", "Contact"].map((link) => (
-                <Text
-                  key={link}
-                  as="a"
-                  href={`#${link.toLowerCase()}`}
-                  fontFamily="mono"
-                  fontSize="0.6rem"
-                  letterSpacing="0.14em"
-                  textTransform="uppercase"
-                  color="rgba(250,251,252,0.25)"
-                  _hover={{ color: "blue.400" }}
-                  transition="color 0.32s cubic-bezier(0.4,0,0.2,1)"
-                >
-                  {link}
-                </Text>
-              ))}
-            </HStack>
-
-            <Text
-              fontFamily="mono"
-              fontSize="0.58rem"
-              letterSpacing="0.1em"
-              color="rgba(250,251,252,0.2)"
-            >
-              2025 Mimic & Engraving Services CC. · Johannesburg, South Africa
-            </Text>
-          </Flex> */}
         </Container>
       </Box>
     </Box>
