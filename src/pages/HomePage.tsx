@@ -123,7 +123,7 @@ const M1ProIcon = () => (
 
 export const HomePage = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
-  
+
   return (
     <Box>
       {/* Nar Bar */}
@@ -790,7 +790,7 @@ export const HomePage = () => {
             direction={{ base: "column", md: "row" }}
             gap={{ base: "1rem", md: "0" }}
           >
-            <Box>
+            <Box alignSelf="center">
               <Heading
                 fontFamily="heading"
                 fontSize={{ base: "2.4rem", lg: "3.4rem" }}
@@ -798,6 +798,7 @@ export const HomePage = () => {
                 color="grey.900"
                 lineHeight="1.05"
                 mt="0.5rem"
+                //textAlign={{ base: "center", md: "left" }}
               >
                 OUR{" "}
                 <Text as="span" color="grey.600">
@@ -1165,64 +1166,6 @@ export const HomePage = () => {
               </Flex>
             </Grid>
           </Box>
-
-          {/* CTA Card */}
-          {/* <Box
-              bg="blue.900"
-              p="2.5rem 2.25rem"
-              display="flex"
-              flexDirection="column"
-              justify="center"
-              align="flex-start"
-            >
-              <Text
-                fontFamily="mono"
-                fontSize="0.62rem"
-                letterSpacing="0.18em"
-                textTransform="uppercase"
-                color="blue.400"
-                mb="1rem"
-              >
-                Get Started
-              </Text>
-              <Heading
-                fontFamily="heading"
-                fontSize="1.55rem"
-                letterSpacing="0.06em"
-                color="white"
-                lineHeight="1.15"
-                mb="1.25rem"
-              >
-                NOT SURE WHICH SERVICE YOU NEED?
-              </Heading>
-              <Text
-                fontSize="0.82rem"
-                color="rgba(250,251,252,0.45)"
-                fontWeight="300"
-                lineHeight="1.7"
-                mb="2rem"
-              >
-                Speak directly with our team — we'll advise on the right
-                approach for your project.
-              </Text>
-              <Button
-                as="a"
-                href="#contact"
-                bg="blue.500"
-                color="white"
-                fontFamily="mono"
-                fontSize="0.7rem"
-                letterSpacing="0.14em"
-                textTransform="uppercase"
-                px="2.1rem"
-                py="0.9rem"
-                borderRadius="3px"
-                _hover={{ bg: "blue.600", transform: "translateY(-2px)" }}
-                transition="background 0.32s cubic-bezier(0.4,0,0.2,1), transform 0.32s cubic-bezier(0.4,0,0.2,1)"
-              >
-                Contact Us →
-              </Button>
-            </Box> */}
         </Container>
       </Box>
 
@@ -1235,6 +1178,28 @@ export const HomePage = () => {
         position="relative"
         overflow="hidden"
       >
+        {/* Enhanced Background Effects */}
+        <Box position="absolute" inset="0" pointerEvents="none">
+          <Box
+            position="absolute"
+            w="400px"
+            h="400px"
+            borderRadius="50%"
+            background="radial-gradient(circle, rgba(74,127,165,0.08) 0%, transparent 70%)"
+            top="-100px"
+            left="-100px"
+          />
+          <Box
+            position="absolute"
+            w="300px"
+            h="300px"
+            borderRadius="50%"
+            background="radial-gradient(circle, rgba(74,127,165,0.06) 0%, transparent 70%)"
+            bottom="-80px"
+            right="-80px"
+          />
+        </Box>
+
         <Container maxW="1200px">
           <Grid
             templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
@@ -1243,7 +1208,29 @@ export const HomePage = () => {
             position="relative"
             zIndex="1"
           >
-            <Box>
+            {/* Enhanced Left Content */}
+            <Box
+              bg="rgba(42, 45, 48, 0.6)"
+              border="1px solid rgba(74,127,165,0.15)"
+              borderRadius="12px"
+              p="3rem 2.5rem"
+              backdropFilter="blur(8px)"
+              boxShadow="0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)"
+              _hover={{
+                transform: "translateY(-4px)",
+                boxShadow:
+                  "0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)",
+              }}
+              transition="all 0.4s cubic-bezier(0.4,0,0.2,1)"
+            >
+              <Box
+                w="40px"
+                h="2px"
+                bg="blue.500"
+                mb="1.5rem"
+                borderRadius="1px"
+              />
+
               <Heading
                 fontFamily="heading"
                 fontSize={{ base: "2.4rem", lg: "3.2rem" }}
@@ -1251,18 +1238,28 @@ export const HomePage = () => {
                 lineHeight="1.05"
                 color="white"
                 mb="1.5rem"
+                textShadow="0 2px 4px rgba(0,0,0,0.3)"
               >
                 40+ YEARS OF
                 <br />
-                <Text as="span" color="blue.400">
+                <Text
+                  as="span"
+                  color="blue.400"
+                  css={{
+                    background:
+                      "linear-gradient(135deg, #4A7FA5 0%, #6BB6FF 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
                   INDUSTRIAL CRAFT
                 </Text>
               </Heading>
 
               <Text
-                fontSize="0.92rem"
+                fontSize="0.95rem"
                 fontWeight="300"
-                color="rgba(250,251,252,0.55)"
+                color="rgba(250,251,252,0.7)"
                 lineHeight="1.85"
                 mb="1.25rem"
               >
@@ -1273,9 +1270,9 @@ export const HomePage = () => {
               </Text>
 
               <Text
-                fontSize="0.92rem"
+                fontSize="0.95rem"
                 fontWeight="300"
-                color="rgba(250,251,252,0.55)"
+                color="rgba(250,251,252,0.7)"
                 lineHeight="1.85"
                 mb="1.25rem"
               >
@@ -1285,106 +1282,199 @@ export const HomePage = () => {
               </Text>
             </Box>
 
+            {/* Enhanced Stats Grid */}
             <Grid
               templateColumns="1fr 1fr"
-              gap="1px"
-              bg="rgba(74,127,165,0.15)"
+              gap="2px"
+              bg="rgba(74,127,165,0.2)"
+              borderRadius="12px"
+              overflow="hidden"
+              boxShadow="0 8px 32px rgba(0,0,0,0.3)"
+              _hover={{
+                transform: "translateY(-2px)",
+                boxShadow: "0 12px 40px rgba(0,0,0,0.4)",
+              }}
+              transition="all 0.4s cubic-bezier(0.4,0,0.2,1)"
             >
               <Box
-                bg="grey.800"
-                p="2rem 1.75rem"
-                _hover={{ bg: "#2a2d30" }}
-                transition="background 0.32s cubic-bezier(0.4,0,0.2,1)"
+                bg="rgba(42, 45, 48, 0.8)"
+                p="2.5rem 2rem"
+                position="relative"
+                _hover={{
+                  bg: "rgba(74,127,165,0.1)",
+                  transform: "scale(1.02)",
+                }}
+                transition="all 0.3s cubic-bezier(0.4,0,0.2,1)"
+                _before={{
+                  content: '""',
+                  position: "absolute",
+                  top: "0",
+                  left: "0",
+                  right: "0",
+                  height: "2px",
+                  bg: "linear-gradient(90deg, transparent, rgba(74,127,165,0.6), transparent)",
+                }}
               >
                 <Text
                   fontFamily="heading"
-                  fontSize="2.8rem"
+                  fontSize="3.2rem"
                   color="blue.400"
                   lineHeight="1"
-                  mb="0.4rem"
+                  mb="0.5rem"
+                  textShadow="0 2px 8px rgba(74,127,165,0.3)"
+                  css={{
+                    background:
+                      "linear-gradient(135deg, #4A7FA5 0%, #6BB6FF 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
                 >
                   40+
                 </Text>
                 <Text
-                  fontSize="0.8rem"
-                  fontWeight="300"
-                  color="rgba(250,251,252,0.45)"
-                  lineHeight="1.5"
+                  fontSize="0.82rem"
+                  fontWeight="400"
+                  color="rgba(250,251,252,0.6)"
+                  lineHeight="1.4"
+                  letterSpacing="0.02em"
                 >
                   Years serving South African industry
                 </Text>
               </Box>
 
               <Box
-                bg="grey.800"
-                p="2rem 1.75rem"
-                _hover={{ bg: "#2a2d30" }}
-                transition="background 0.32s cubic-bezier(0.4,0,0.2,1)"
+                bg="rgba(42, 45, 48, 0.8)"
+                p="2.5rem 2rem"
+                position="relative"
+                _hover={{
+                  bg: "rgba(74,127,165,0.1)",
+                  transform: "scale(1.02)",
+                }}
+                transition="all 0.3s cubic-bezier(0.4,0,0.2,1)"
+                _before={{
+                  content: '""',
+                  position: "absolute",
+                  top: "0",
+                  left: "0",
+                  right: "0",
+                  height: "2px",
+                  bg: "linear-gradient(90deg, transparent, rgba(74,127,165,0.6), transparent)",
+                }}
               >
                 <Text
                   fontFamily="heading"
-                  fontSize="2.8rem"
+                  fontSize="3.2rem"
                   color="blue.400"
                   lineHeight="1"
-                  mb="0.4rem"
+                  mb="0.5rem"
+                  textShadow="0 2px 8px rgba(74,127,165,0.3)"
+                  css={{
+                    background:
+                      "linear-gradient(135deg, #4A7FA5 0%, #6BB6FF 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
                 >
                   5
                 </Text>
                 <Text
-                  fontSize="0.8rem"
-                  fontWeight="300"
-                  color="rgba(250,251,252,0.45)"
-                  lineHeight="1.5"
+                  fontSize="0.82rem"
+                  fontWeight="400"
+                  color="rgba(250,251,252,0.6)"
+                  lineHeight="1.4"
+                  letterSpacing="0.02em"
                 >
                   Specialised service offerings
                 </Text>
               </Box>
 
               <Box
-                bg="grey.800"
-                p="2rem 1.75rem"
-                _hover={{ bg: "#2a2d30" }}
-                transition="background 0.32s cubic-bezier(0.4,0,0.2,1)"
+                bg="rgba(42, 45, 48, 0.8)"
+                p="2.5rem 2rem"
+                position="relative"
+                _hover={{
+                  bg: "rgba(74,127,165,0.1)",
+                  transform: "scale(1.02)",
+                }}
+                transition="all 0.3s cubic-bezier(0.4,0,0.2,1)"
+                _before={{
+                  content: '""',
+                  position: "absolute",
+                  top: "0",
+                  left: "0",
+                  right: "0",
+                  height: "2px",
+                  bg: "linear-gradient(90deg, transparent, rgba(74,127,165,0.6), transparent)",
+                }}
               >
                 <Text
                   fontFamily="heading"
-                  fontSize="2.8rem"
+                  fontSize="3.2rem"
                   color="blue.400"
                   lineHeight="1"
-                  mb="0.4rem"
+                  mb="0.5rem"
+                  textShadow="0 2px 8px rgba(74,127,165,0.3)"
+                  css={{
+                    background:
+                      "linear-gradient(135deg, #4A7FA5 0%, #6BB6FF 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
                 >
                   3
                 </Text>
                 <Text
-                  fontSize="0.8rem"
-                  fontWeight="300"
-                  color="rgba(250,251,252,0.45)"
-                  lineHeight="1.5"
+                  fontSize="0.82rem"
+                  fontWeight="400"
+                  color="rgba(250,251,252,0.6)"
+                  lineHeight="1.4"
+                  letterSpacing="0.02em"
                 >
                   Engraving machine types on-site
                 </Text>
               </Box>
 
               <Box
-                bg="grey.800"
-                p="2rem 1.75rem"
-                _hover={{ bg: "#2a2d30" }}
-                transition="background 0.32s cubic-bezier(0.4,0,0.2,1)"
+                bg="rgba(42, 45, 48, 0.8)"
+                p="2.5rem 2rem"
+                position="relative"
+                _hover={{
+                  bg: "rgba(74,127,165,0.1)",
+                  transform: "scale(1.02)",
+                }}
+                transition="all 0.3s cubic-bezier(0.4,0,0.2,1)"
+                _before={{
+                  content: '""',
+                  position: "absolute",
+                  top: "0",
+                  left: "0",
+                  right: "0",
+                  height: "2px",
+                  bg: "linear-gradient(90deg, transparent, rgba(74,127,165,0.6), transparent)",
+                }}
               >
                 <Text
                   fontFamily="heading"
-                  fontSize="2.8rem"
+                  fontSize="3.2rem"
                   color="blue.400"
                   lineHeight="1"
-                  mb="0.4rem"
+                  mb="0.5rem"
+                  textShadow="0 2px 8px rgba(74,127,165,0.3)"
+                  css={{
+                    background:
+                      "linear-gradient(135deg, #4A7FA5 0%, #6BB6FF 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
                 >
                   JHB
                 </Text>
                 <Text
-                  fontSize="0.8rem"
-                  fontWeight="300"
-                  color="rgba(250,251,252,0.45)"
-                  lineHeight="1.5"
+                  fontSize="0.82rem"
+                  fontWeight="400"
+                  color="rgba(250,251,252,0.6)"
+                  lineHeight="1.4"
+                  letterSpacing="0.02em"
                 >
                   Greenside, Johannesburg based
                 </Text>
@@ -1395,23 +1485,72 @@ export const HomePage = () => {
       </Box>
 
       {/* Capabilities Section */}
-      <Box as="section" id="capabilities" py="7rem" bg="#F5F6F7">
+      <Box
+        as="section"
+        id="capabilities"
+        py="7rem"
+        bg="#F5F6F7"
+        position="relative"
+        overflow="hidden"
+      >
+        {/* Enhanced Background Effects */}
+        <Box position="absolute" inset="0" pointerEvents="none">
+          <Box
+            position="absolute"
+            w="350px"
+            h="350px"
+            borderRadius="50%"
+            background="radial-gradient(circle, rgba(74,127,165,0.06) 0%, transparent 70%)"
+            top="-80px"
+            right="-80px"
+          />
+          <Box
+            position="absolute"
+            w="250px"
+            h="250px"
+            borderRadius="50%"
+            background="radial-gradient(circle, rgba(74,127,165,0.04) 0%, transparent 70%)"
+            bottom="-60px"
+            left="-60px"
+          />
+        </Box>
+
         <Container maxW="1200px">
           <Grid
             templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
             gap="5rem"
             alignItems="flex-start"
+            position="relative"
+            zIndex="1"
           >
-            <Box>
-              <Text
-                fontFamily="mono"
-                fontSize="0.65rem"
-                letterSpacing="0.2em"
-                textTransform="uppercase"
-                color="blue.500"
-              >
-                Capabilities
-              </Text>
+            {/* Enhanced Left Content */}
+            <Box
+              bg="white"
+              border="1px solid rgba(74,127,165,0.1)"
+              borderRadius="16px"
+              p="3rem 2.5rem"
+              boxShadow="0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)"
+              _hover={{
+                transform: "translateY(-4px)",
+                boxShadow:
+                  "0 12px 40px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.06)",
+              }}
+              transition="all 0.4s cubic-bezier(0.4,0,0.2,1)"
+            >
+              <Flex align="center" gap="0.75rem" mb="1.5rem">
+                <Box w="32px" h="2px" bg="blue.500" borderRadius="1px" />
+                <Text
+                  fontFamily="mono"
+                  fontSize="0.65rem"
+                  letterSpacing="0.2em"
+                  textTransform="uppercase"
+                  color="blue.500"
+                  fontWeight="600"
+                >
+                  Capabilities
+                </Text>
+              </Flex>
+
               <Heading
                 fontFamily="heading"
                 fontSize={{ base: "2.2rem", lg: "3rem" }}
@@ -1422,13 +1561,22 @@ export const HomePage = () => {
               >
                 PRECISION AT
                 <br />
-                <Text as="span" color="grey.600">
+                <Text
+                  as="span"
+                  css={{
+                    background:
+                      "linear-gradient(135deg, #4A7FA5 0%, #6BB6FF 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
                   EVERY SCALE
                 </Text>
               </Heading>
+
               <Text
-                fontSize="0.88rem"
-                color="grey.500"
+                fontSize="0.92rem"
+                color="grey.600"
                 fontWeight="300"
                 lineHeight="1.85"
                 mb="2.5rem"
@@ -1465,26 +1613,29 @@ export const HomePage = () => {
                     key={index}
                     align="flex-start"
                     gap="1rem"
-                    py="1rem"
-                    borderBottom="1px solid rgba(92,92,92,0.12)"
-                    _hover={{ pl: "0.6rem" }}
-                    transition="padding-left 0.32s cubic-bezier(0.4,0,0.2,1)"
+                    py="1.25rem"
+                    px="1rem"
+                    borderRadius="8px"
+                    borderBottom="1px solid rgba(92,92,92,0.08)"
+                    _hover={{
+                      bg: "rgba(74,127,165,0.04)",
+                      pl: "1.5rem",
+                      transform: "translateX(4px)",
+                    }}
+                    transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
                     cursor="default"
                   >
                     <Box
-                      w="6px"
-                      h="6px"
+                      w="8px"
+                      h="8px"
                       borderRadius="50%"
                       bg="blue.500"
                       flexShrink="0"
                       mt="0.58rem"
+                      boxShadow="0 0 0 2px rgba(74,127,165,0.2)"
                     />
-                    <Text
-                      fontSize="0.875rem"
-                      color="grey.900"
-                      lineHeight="1.65"
-                    >
-                      <Text as="span" fontWeight="500">
+                    <Text fontSize="0.9rem" color="grey.900" lineHeight="1.65">
+                      <Text as="span" fontWeight="600" color="grey.800">
                         {item.title}
                       </Text>{" "}
                       — {item.desc}
@@ -1494,13 +1645,25 @@ export const HomePage = () => {
               </VStack>
             </Box>
 
-            <VStack gap="1px" bg="rgba(92,92,92,0.12)">
+            {/* Enhanced Right Content */}
+            <VStack
+              gap="3px"
+              bg="rgba(74,127,165,0.08)"
+              borderRadius="16px"
+              overflow="hidden"
+              boxShadow="0 8px 32px rgba(0,0,0,0.08)"
+              _hover={{
+                transform: "translateY(-2px)",
+                boxShadow: "0 12px 40px rgba(0,0,0,0.12)",
+              }}
+              transition="all 0.4s cubic-bezier(0.4,0,0.2,1)"
+            >
               {[
                 {
                   icon: (
                     <svg
-                      width="20"
-                      height="20"
+                      width="22"
+                      height="22"
                       viewBox="0 0 20 20"
                       fill="none"
                       stroke="currentColor"
@@ -1516,8 +1679,8 @@ export const HomePage = () => {
                 {
                   icon: (
                     <svg
-                      width="20"
-                      height="20"
+                      width="22"
+                      height="22"
                       viewBox="0 0 20 20"
                       fill="none"
                       stroke="currentColor"
@@ -1532,8 +1695,8 @@ export const HomePage = () => {
                 {
                   icon: (
                     <svg
-                      width="20"
-                      height="20"
+                      width="22"
+                      height="22"
                       viewBox="0 0 20 20"
                       fill="none"
                       stroke="currentColor"
@@ -1550,8 +1713,8 @@ export const HomePage = () => {
                 {
                   icon: (
                     <svg
-                      width="20"
-                      height="20"
+                      width="22"
+                      height="22"
                       viewBox="0 0 20 20"
                       fill="none"
                       stroke="currentColor"
@@ -1567,44 +1730,61 @@ export const HomePage = () => {
                 <Flex
                   key={index}
                   bg="white"
-                  p="1.75rem 2rem"
-                  gap="1.35rem"
+                  p="2rem 2.25rem"
+                  gap="1.5rem"
                   align="flex-start"
-                  _hover={{ bg: "blue.50" }}
-                  transition="background 0.32s cubic-bezier(0.4,0,0.2,1)"
+                  position="relative"
+                  _hover={{
+                    bg: "rgba(74,127,165,0.05)",
+                    transform: "scale(1.02)",
+                  }}
+                  transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
+                  _before={{
+                    content: '""',
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    right: "0",
+                    height: "2px",
+                    bg:
+                      index === 0
+                        ? "linear-gradient(90deg, transparent, rgba(74,127,165,0.4), transparent)"
+                        : "transparent",
+                  }}
                 >
                   <Flex
-                    w="42px"
-                    h="42px"
+                    w="48px"
+                    h="48px"
                     flexShrink="0"
-                    bg="grey.100"
-                    borderRadius="3px"
+                    bg="rgba(74,127,165,0.1)"
+                    borderRadius="8px"
                     align="center"
                     justify="center"
-                    color="grey.600"
-                    transition="background 0.32s cubic-bezier(0.4,0,0.2,1), color 0.32s cubic-bezier(0.4,0,0.2,1)"
-                    // sx={{
-                    //   ".chakra-ui-light &:hover": {
-                    //     bg: "blue.500",
-                    //     color: "white",
-                    //   },
-                    // }}
+                    color="blue.600"
+                    boxShadow="0 2px 8px rgba(74,127,165,0.15)"
+                    _groupHover={{
+                      bg: "blue.500",
+                      color: "white",
+                      transform: "scale(1.1)",
+                    }}
+                    transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
                   >
                     {item.icon}
                   </Flex>
                   <Box>
                     <Heading
                       fontFamily="heading"
-                      fontSize="1.15rem"
-                      letterSpacing="0.07em"
+                      fontSize="1.2rem"
+                      letterSpacing="0.05em"
                       color="grey.900"
-                      mb="0.3rem"
+                      mb="0.5rem"
+                      lineHeight="1.2"
                     >
                       {item.title.toUpperCase()}
                     </Heading>
                     <Text
-                      fontSize="0.8rem"
-                      color="grey.500"
+                      fontSize="0.85rem"
+                      color="grey.600"
                       fontWeight="300"
                       lineHeight="1.65"
                     >
