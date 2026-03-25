@@ -14,7 +14,6 @@ import {
   IconButton,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import logoImage from "@/assets/logo.png";
 
 // CSS animations
 const marqueeAnimation = "marquee 26s linear infinite";
@@ -140,7 +139,7 @@ export const HomePage = () => {
           <Flex align="center" justify="space-between" h="68px">
             <Flex align="center" gap="0.85rem">
               <Image
-                src={logoImage}
+                src="/mimic-website/logo.png"
                 alt="Mimic Engraving logo"
                 h="45px"
                 objectFit="contain"
