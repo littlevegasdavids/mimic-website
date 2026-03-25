@@ -172,7 +172,7 @@ export const HomePage = () => {
               <HStack gap="2rem">
                 <Text
                   as="a"
-                  href="#services"
+                  //href="#services"
                   fontFamily="mono"
                   fontSize="0.68rem"
                   letterSpacing="0.14em"
@@ -185,7 +185,7 @@ export const HomePage = () => {
                 </Text>
                 <Text
                   as="a"
-                  href="#about"
+                  //href="#about"
                   fontFamily="mono"
                   fontSize="0.68rem"
                   letterSpacing="0.14em"
@@ -198,7 +198,7 @@ export const HomePage = () => {
                 </Text>
                 <Text
                   as="a"
-                  href="#capabilities"
+                  //href="#capabilities"
                   fontFamily="mono"
                   fontSize="0.68rem"
                   letterSpacing="0.14em"
@@ -211,7 +211,7 @@ export const HomePage = () => {
                 </Text>
                 <Button
                   as="a"
-                  href="#contact"
+                  //href="#contact"
                   bg="blue.500"
                   color="white"
                   fontFamily="mono"
@@ -344,7 +344,7 @@ export const HomePage = () => {
           <HStack gap="1rem" flexWrap="wrap">
             <Button
               as="a"
-              href="#services"
+              //href="#services"
               bg="blue.500"
               color="white"
               fontFamily="mono"
@@ -361,7 +361,7 @@ export const HomePage = () => {
             </Button>
             <Button
               as="a"
-              href="#contact"
+              //href="#contact"
               variant="outline"
               borderColor="rgba(74,127,165,0.4)"
               color="rgba(250,251,252,0.65)"
@@ -1573,12 +1573,12 @@ export const HomePage = () => {
                     justify="center"
                     color="grey.600"
                     transition="background 0.32s cubic-bezier(0.4,0,0.2,1), color 0.32s cubic-bezier(0.4,0,0.2,1)"
-                    sx={{
-                      ".chakra-ui-light &:hover": {
-                        bg: "blue.500",
-                        color: "white",
-                      },
-                    }}
+                    // sx={{
+                    //   ".chakra-ui-light &:hover": {
+                    //     bg: "blue.500",
+                    //     color: "white",
+                    //   },
+                    // }}
                   >
                     {item.icon}
                   </Flex>
