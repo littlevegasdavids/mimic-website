@@ -781,7 +781,7 @@ export const HomePage = () => {
       </Box>
 
       {/* Services Section */}
-      <Box as="section" id="services" py="7rem" bg="gray.50">
+      <Box as="section" id="services" py="16" bg="gray.50">
         <Container maxW="1200px">
           <Flex
             justify="space-between"
@@ -791,15 +791,6 @@ export const HomePage = () => {
             gap={{ base: "1rem", md: "0" }}
           >
             <Box>
-              {/* <Text
-                fontFamily="mono"
-                fontSize="0.65rem"
-                letterSpacing="0.2em"
-                textTransform="uppercase"
-                color="blue.500"
-              >
-                What We Do
-              </Text> */}
               <Heading
                 fontFamily="heading"
                 fontSize={{ base: "2.4rem", lg: "3.4rem" }}
@@ -814,20 +805,6 @@ export const HomePage = () => {
                 </Text>
               </Heading>
             </Box>
-            {/* <Text
-              as="a"
-              href="#contact"
-              fontFamily="mono"
-              fontSize="0.68rem"
-              letterSpacing="0.14em"
-              textTransform="uppercase"
-              color="blue.500"
-              _hover={{ pl: "1rem" }}
-              transition="padding-left 0.32s cubic-bezier(0.4,0,0.2,1)"
-              pb="2px"
-            >
-              All Services →
-            </Text> */}
           </Flex>
 
           <Box>
@@ -1267,29 +1244,6 @@ export const HomePage = () => {
             zIndex="1"
           >
             <Box>
-              {/* <HStack gap="1rem" mb="2rem">
-                <Image
-                  src="https://www.mimicengraving.co.za/assets/images/content/logo.png"
-                  alt="Mimic Engraving"
-                  h="44px"
-                  filter="brightness(0) invert(1)"
-                  opacity="0.85"
-                />
-                <Box w="1px" h="36px" bg="rgba(74,127,165,0.3)" />
-                <Text
-                  fontFamily="mono"
-                  fontSize="0.6rem"
-                  letterSpacing="0.16em"
-                  textTransform="uppercase"
-                  color="blue.400"
-                  lineHeight="1.5"
-                >
-                  Est. Johannesburg
-                  <br />
-                  South Africa
-                </Text>
-              </HStack> */}
-
               <Heading
                 fontFamily="heading"
                 fontSize={{ base: "2.4rem", lg: "3.2rem" }}
@@ -1329,21 +1283,6 @@ export const HomePage = () => {
                 panel installation, every job is handled with the same precision
                 and attention to detail that has defined us since day one.
               </Text>
-
-              {/* <Box
-                fontFamily="mono"
-                fontSize="0.68rem"
-                letterSpacing="0.12em"
-                color="rgba(250,251,252,0.3)"
-                borderTop="1px solid rgba(74,127,165,0.2)"
-                pt="1.5rem"
-                mt="1.5rem"
-                lineHeight="2"
-              >
-                Barry Hertzog Avenue · Greenside · Johannesburg
-                <br />
-                (011) 646 7539 · design@mimicengraving.co.za
-              </Box> */}
             </Box>
 
             <Grid
