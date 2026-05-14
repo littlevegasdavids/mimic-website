@@ -420,7 +420,7 @@ export const HomePage = () => {
             lineHeight="1.8"
             mb="3rem"
           >
-            From mimic panels and precision engraving to 3D printing and bespoke
+            From mimic panels and precision engraving to bespoke
             signage — we bring industrial accuracy and 40 years of South African
             expertise to every project.
           </Text>
@@ -745,8 +745,7 @@ export const HomePage = () => {
             "Rotary Engraving",
             "Laser Engraving",
             "Custom Signage",
-            "3D Printing",
-            "M1 Pro Printing",
+            "M1 Pro Printers",
             "Control Panels",
             "Name Plates",
             "Safety Signs",
@@ -754,8 +753,7 @@ export const HomePage = () => {
             "Rotary Engraving",
             "Laser Engraving",
             "Custom Signage",
-            "3D Printing",
-            "M1 Pro Printing",
+            "M1 Pro Printers",
             "Control Panels",
             "Name Plates",
             "Safety Signs",
@@ -1034,70 +1032,6 @@ export const HomePage = () => {
               maxW={{ lg: "800px" }}
               mx="auto"
             >
-              {/* Service - 3D Printing */}
-              <Flex
-                bg="white"
-                p="2.5rem 2.25rem"
-                position="relative"
-                borderRadius="12px"
-                border="1px solid"
-                borderColor="gray.200"
-                boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-                _hover={{
-                  bg: "blue.50",
-                  borderColor: "blue.300",
-                  boxShadow:
-                    "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                  transform: "translateY(-4px)",
-                }}
-                transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
-                gap="3"
-                direction="column"
-              >
-                <Flex align="center" gap="1rem" mb="0.7rem">
-                  <Box w="38px" h="38px" color="grey.600">
-                    <PrintingIcon />
-                  </Box>
-                  <Heading
-                    fontFamily="heading"
-                    fontSize="1.45rem"
-                    letterSpacing="0.07em"
-                    color="blue.600"
-                  >
-                    3D PRINTING
-                  </Heading>
-                </Flex>
-                <Text
-                  fontSize="0.855rem"
-                  color="grey.600"
-                  lineHeight="1.75"
-                  fontWeight="300"
-                  fontStyle="italic"
-                >
-                  Professional 3D printing for prototypes, industrial components
-                  and custom parts. High-resolution output in a range of
-                  materials suited to commercial and engineering requirements.
-                </Text>
-                <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
-                  {["Prototypes", "Components", "Custom Parts"].map((pill) => (
-                    <Text
-                      key={pill}
-                      fontFamily="mono"
-                      fontSize="0.58rem"
-                      letterSpacing="0.1em"
-                      textTransform="uppercase"
-                      bg="grey.100"
-                      color="grey.600"
-                      px="0.6rem"
-                      py="0.22rem"
-                      borderRadius="2px"
-                    >
-                      {pill}
-                    </Text>
-                  ))}
-                </HStack>
-              </Flex>
-
               {/* Service - M1 Pro Printing */}
               <Flex
                 bg="white"
@@ -2132,8 +2066,7 @@ export const HomePage = () => {
                   <option value="mimic-panels" style={{ background: '#1A1C1E' }}>Mimic Panels</option>
                   <option value="engraving" style={{ background: '#1A1C1E' }}>Engraving</option>
                   <option value="signage" style={{ background: '#1A1C1E' }}>Signage</option>
-                  <option value="3d-printing" style={{ background: '#1A1C1E' }}>3D Printing</option>
-                  <option value="m1-pro-printing" style={{ background: '#1A1C1E' }}>M1 Pro Printing</option>
+                  <option value="m1-pro-printing" style={{ background: '#1A1C1E' }}>M1 Pro Printers</option>
                   <option value="multiple" style={{ background: '#1A1C1E' }}>Multiple / Not Sure</option>
                 </Select> */}
               </Box>
