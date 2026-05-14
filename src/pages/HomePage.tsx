@@ -1538,11 +1538,6 @@ export const HomePage = () => {
                     px="1rem"
                     borderRadius="8px"
                     borderBottom="1px solid rgba(92,92,92,0.08)"
-                    _hover={{
-                      bg: "rgba(74,127,165,0.04)",
-                      pl: "1.5rem",
-                      transform: "translateX(4px)",
-                    }}
                     transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
                     cursor="default"
                   >
@@ -1792,7 +1787,7 @@ export const HomePage = () => {
 
               {/* WhatsApp Button */}
               <Link
-                href="https://wa.me/270723421357?text=Hi%2C%20I%27m%20interested%20in%20your%20engraving%20services"
+                href="https://wa.me/270723421357?text=Hi%20I%20am%20interested%20in%20your%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 bg="green.500"
@@ -1839,13 +1834,29 @@ export const HomePage = () => {
                         stroke="currentColor"
                         strokeWidth="1.4"
                       >
+                        <circle cx="8" cy="6" r="2.5" />
+                        <path d="M3 14 C3 11 5.2 9 8 9 C10.8 9 13 11 13 14" />
+                      </svg>
+                    ),
+                    label: "Contact",
+                    value: "Trever — Design & Sales",
+                  },
+                  {
+                    icon: (
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.4"
+                      >
                         <path d="M2 4 L8 9 L14 4" />
                         <rect x="2" y="3" width="12" height="10" rx="1" />
                       </svg>
                     ),
                     label: "Emails",
-                    value:
-                      "sales@mimicengraving.co.za - design@mimicengraving.co.za",
+                    value: "sales@mimicengraving.co.za",
                   },
                   {
                     icon: (
@@ -1879,23 +1890,6 @@ export const HomePage = () => {
                     ),
                     label: "Address",
                     value: "114 Barry Hertzog Avenue, Greenside, Johannesburg",
-                  },
-                  {
-                    icon: (
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.4"
-                      >
-                        <circle cx="8" cy="6" r="2.5" />
-                        <path d="M3 14 C3 11 5.2 9 8 9 C10.8 9 13 11 13 14" />
-                      </svg>
-                    ),
-                    label: "Contact",
-                    value: "Trever — Design & Sales",
                   },
                 ].map((item, index) => (
                   <Flex key={index} gap="0.9rem" align="flex-start">
