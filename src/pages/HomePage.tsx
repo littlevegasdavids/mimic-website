@@ -420,9 +420,9 @@ export const HomePage = () => {
             lineHeight="1.8"
             mb="3rem"
           >
-            From mimic panels and precision engraving to bespoke
-            signage — we bring industrial accuracy and 40 years of South African
-            expertise to every project.
+            From mimic panels and precision engraving to bespoke signage — we
+            bring industrial accuracy and 40 years of South African expertise to
+            every project.
           </Text>
 
           <HStack gap="1rem" flexWrap="wrap">
@@ -1800,7 +1800,7 @@ export const HomePage = () => {
                 mb="2.5rem"
               >
                 Ready to start a project or need a quote? Reach out directly to
-                our team in Greenside, Johannesburg.
+                our team.
               </Text>
 
               {/* WhatsApp Button */}
@@ -1856,8 +1856,9 @@ export const HomePage = () => {
                         <rect x="2" y="3" width="12" height="10" rx="1" />
                       </svg>
                     ),
-                    label: "Email",
-                    value: "design@mimicengraving.co.za",
+                    label: "Emails",
+                    value:
+                      "sales@mimicengraving.co.za - design@mimicengraving.co.za",
                   },
                   {
                     icon: (
@@ -1873,7 +1874,7 @@ export const HomePage = () => {
                       </svg>
                     ),
                     label: "Phone",
-                    value: "(011) 646 7539 · 072 342 1357",
+                    value: "011 646 7539 · 072 342 1357",
                   },
                   {
                     icon: (
@@ -1890,7 +1891,7 @@ export const HomePage = () => {
                       </svg>
                     ),
                     label: "Address",
-                    value: "Barry Hertzog Avenue, Greenside, Johannesburg",
+                    value: "114 Barry Hertzog Avenue, Greenside, Johannesburg",
                   },
                   {
                     icon: (
@@ -1907,7 +1908,7 @@ export const HomePage = () => {
                       </svg>
                     ),
                     label: "Contact",
-                    value: "Trever Moyo — Design & Sales",
+                    value: "Trever — Design & Sales",
                   },
                 ].map((item, index) => (
                   <Flex key={index} gap="0.9rem" align="flex-start">
