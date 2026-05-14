@@ -812,80 +812,11 @@ export const HomePage = () => {
               templateColumns={{
                 base: "1fr",
                 md: "1fr 1fr",
-                lg: "repeat(3, 1fr)",
+                lg: "repeat(2, 1fr)",
               }}
               gap="2rem"
               mb="2rem"
             >
-              {/* Service - Mimic Panels */}
-              <Flex
-                bg="white"
-                p="2.5rem 2.25rem"
-                position="relative"
-                borderRadius="12px"
-                border="1px solid"
-                borderColor="gray.200"
-                boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-                _hover={{
-                  bg: "blue.50",
-                  borderColor: "blue.300",
-                  boxShadow:
-                    "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                  transform: "translateY(-4px)",
-                }}
-                transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
-                gap="3"
-                direction="column"
-              >
-                <Flex align="center" gap="1rem" mb="0.7rem">
-                  <Box w="38px" h="38px" color="grey.600">
-                    <PanelIcon />
-                  </Box>
-                  <Heading
-                    fontFamily="heading"
-                    fontSize="1.45rem"
-                    letterSpacing="0.07em"
-                    color="blue.600"
-                  >
-                    MIMIC PANELS
-                  </Heading>
-                </Flex>
-                <Text
-                  fontSize="0.855rem"
-                  color="grey.600"
-                  lineHeight="1.75"
-                  fontWeight="300"
-                  fontStyle="italic"
-                >
-                  Mosaic-system panels built on polycarbonate glass-filled fibre
-                  tiles. UV stable, shock resistant modules in 18×18mm, 24×24mm
-                  and 48×48mm sizes — light grey or black standard.
-                </Text>
-                <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
-                  {[
-                    "Mosaic Tiles",
-                    "Grid Systems",
-                    "Push Buttons",
-                    "LED Mounting",
-                  ].map((pill) => (
-                    <Text
-                      key={pill}
-                      fontFamily="mono"
-                      fontSize="0.58rem"
-                      letterSpacing="0.1em"
-                      textTransform="uppercase"
-                      bg="grey.100"
-                      color="grey.600"
-                      px="0.6rem"
-                      py="0.22rem"
-                      borderRadius="2px"
-                    >
-                      {pill}
-                    </Text>
-                  ))}
-                </HStack>
-              </Flex>
-
               {/* Service - Engraving */}
               <Flex
                 bg="white"
@@ -1018,20 +949,76 @@ export const HomePage = () => {
                   )}
                 </HStack>
               </Flex>
-            </Grid>
 
-            {/* Last 2 services - centered on desktop */}
-            <Grid
-              templateColumns={{
-                base: "1fr",
-                md: "1fr 1fr",
-                lg: "1fr 1fr",
-              }}
-              gap="2rem"
-              justifyItems="center"
-              maxW={{ lg: "800px" }}
-              mx="auto"
-            >
+              {/* Service - Mimic Panels */}
+              <Flex
+                bg="white"
+                p="2.5rem 2.25rem"
+                position="relative"
+                borderRadius="12px"
+                border="1px solid"
+                borderColor="gray.200"
+                boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+                _hover={{
+                  bg: "blue.50",
+                  borderColor: "blue.300",
+                  boxShadow:
+                    "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                  transform: "translateY(-4px)",
+                }}
+                transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
+                gap="3"
+                direction="column"
+              >
+                <Flex align="center" gap="1rem" mb="0.7rem">
+                  <Box w="38px" h="38px" color="grey.600">
+                    <PanelIcon />
+                  </Box>
+                  <Heading
+                    fontFamily="heading"
+                    fontSize="1.45rem"
+                    letterSpacing="0.07em"
+                    color="blue.600"
+                  >
+                    MIMIC PANELS
+                  </Heading>
+                </Flex>
+                <Text
+                  fontSize="0.855rem"
+                  color="grey.600"
+                  lineHeight="1.75"
+                  fontWeight="300"
+                  fontStyle="italic"
+                >
+                  Mosaic-system panels built on polycarbonate glass-filled fibre
+                  tiles. UV stable, shock resistant modules in 18×18mm, 24×24mm
+                  and 48×48mm sizes — light grey or black standard.
+                </Text>
+                <HStack gap="0.35rem" mt="1.2rem" flexWrap="wrap">
+                  {[
+                    "Mosaic Tiles",
+                    "Grid Systems",
+                    "Push Buttons",
+                    "LED Mounting",
+                  ].map((pill) => (
+                    <Text
+                      key={pill}
+                      fontFamily="mono"
+                      fontSize="0.58rem"
+                      letterSpacing="0.1em"
+                      textTransform="uppercase"
+                      bg="grey.100"
+                      color="grey.600"
+                      px="0.6rem"
+                      py="0.22rem"
+                      borderRadius="2px"
+                    >
+                      {pill}
+                    </Text>
+                  ))}
+                </HStack>
+              </Flex>
+
               {/* Service - M1 Pro Printing */}
               <Flex
                 bg="white"
