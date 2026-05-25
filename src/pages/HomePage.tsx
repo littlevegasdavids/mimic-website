@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Box,
   Container,
@@ -123,6 +124,54 @@ const M1ProIcon = () => (
 
 export const HomePage = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleChange = (e: { target: { name: string; value: string } }) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const isFormValid =
+    formData.firstName.trim() !== "" &&
+    formData.lastName.trim() !== "" &&
+    formData.email.trim() !== "" &&
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) &&
+    formData.message.trim() !== "";
+
+  const handleSubmit = async (e: { preventDefault(): void }) => {
+    e.preventDefault();
+    if (!isFormValid) return;
+    setSubmitStatus("loading");
+    try {
+      const res = await fetch("https://formspree.io/f/xaqkdrlr", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          "First Name": formData.firstName,
+          "Last Name": formData.lastName,
+          email: formData.email,
+          "Service Required": formData.service,
+          "Project Details": formData.message,
+        }),
+      });
+      if (res.ok) {
+        setSubmitStatus("success");
+        setFormData({ firstName: "", lastName: "", email: "", service: "", message: "" });
+        setTimeout(() => setSubmitStatus("idle"), 4000);
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch {
+      setSubmitStatus("error");
+    }
+  };
 
   return (
     <Box>
@@ -1929,7 +1978,7 @@ export const HomePage = () => {
               </VStack>
             </Box>
 
-            <VStack gap="0.9rem" align="stretch">
+            <VStack gap="0.9rem" align="stretch" as="form" onSubmit={handleSubmit}>
               <Grid templateColumns="1fr 1fr" gap="0.9rem">
                 <Box>
                   <Text
@@ -1943,6 +1992,9 @@ export const HomePage = () => {
                     First Name
                   </Text>
                   <Input
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
                     bg="rgba(255,255,255,0.04)"
                     border="1px solid rgba(74,127,165,0.2)"
                     borderRadius="3px"
@@ -1971,6 +2023,9 @@ export const HomePage = () => {
                     Last Name
                   </Text>
                   <Input
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
                     bg="rgba(255,255,255,0.04)"
                     border="1px solid rgba(74,127,165,0.2)"
                     borderRadius="3px"
@@ -2002,6 +2057,9 @@ export const HomePage = () => {
                 </Text>
                 <Input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   bg="rgba(255,255,255,0.04)"
                   border="1px solid rgba(74,127,165,0.2)"
                   borderRadius="3px"
@@ -2030,27 +2088,30 @@ export const HomePage = () => {
                 >
                   Service Required
                 </Text>
-                {/* <Select
-                  bg="rgba(255,255,255,0.04)"
-                  border="1px solid rgba(74,127,165,0.2)"
-                  borderRadius="3px"
-                  color="white"
-                  fontFamily="body"
-                  fontSize="0.875rem"
-                  fontWeight="300"
-                  placeholder="Select a service…"
-                  _focus={{
-                    borderColor: "blue.500",
-                    bg: "rgba(74,127,165,0.06)"
+                <select
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  style={{
+                    background: "#1A1C1E",
+                    border: "1px solid rgba(74,127,165,0.2)",
+                    borderRadius: "3px",
+                    color: formData.service ? "white" : "rgba(250,251,252,0.4)",
+                    fontFamily: "DM Sans, sans-serif",
+                    fontSize: "0.875rem",
+                    fontWeight: 300,
+                    width: "100%",
+                    padding: "0 1rem",
+                    height: "2.5rem",
                   }}
-                  transition="border-color 0.32s cubic-bezier(0.4,0,0.2,1), background 0.32s cubic-bezier(0.4,0,0.2,1)"
                 >
-                  <option value="mimic-panels" style={{ background: '#1A1C1E' }}>Mimic Panels</option>
-                  <option value="engraving" style={{ background: '#1A1C1E' }}>Engraving</option>
-                  <option value="signage" style={{ background: '#1A1C1E' }}>Signage</option>
-                  <option value="m1-pro-printing" style={{ background: '#1A1C1E' }}>M1 Pro Printers</option>
-                  <option value="multiple" style={{ background: '#1A1C1E' }}>Multiple / Not Sure</option>
-                </Select> */}
+                  <option value="" disabled style={{ background: "#1A1C1E" }}>Select a service…</option>
+                  <option value="Mimic Panels" style={{ background: "#1A1C1E", color: "white" }}>Mimic Panels</option>
+                  <option value="Engraving" style={{ background: "#1A1C1E", color: "white" }}>Engraving</option>
+                  <option value="Signage" style={{ background: "#1A1C1E", color: "white" }}>Signage</option>
+                  <option value="M1 Pro Printer" style={{ background: "#1A1C1E", color: "white" }}>M1 Pro Printers</option>
+                  <option value="Other" style={{ background: "#1A1C1E", color: "white" }}>Other</option>
+                </select>
               </Box>
 
               <Box>
@@ -2065,6 +2126,9 @@ export const HomePage = () => {
                   Project Details
                 </Text>
                 <Textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   bg="rgba(255,255,255,0.04)"
                   border="1px solid rgba(74,127,165,0.2)"
                   borderRadius="3px"
@@ -2084,8 +2148,22 @@ export const HomePage = () => {
                 />
               </Box>
 
+              {submitStatus === "success" && (
+                <Text fontFamily="mono" fontSize="0.75rem" color="green.400" letterSpacing="0.1em">
+                  Enquiry sent — we'll be in touch shortly.
+                </Text>
+              )}
+              {submitStatus === "error" && (
+                <Text fontFamily="mono" fontSize="0.75rem" color="red.400" letterSpacing="0.1em">
+                  Something went wrong. Please try again or email us directly.
+                </Text>
+              )}
+
               <Button
-                bg="blue.500"
+                type="submit"
+                loading={submitStatus === "loading"}
+                disabled={!isFormValid || submitStatus === "loading" || submitStatus === "success"}
+                bg={submitStatus === "success" ? "green.600" : "blue.500"}
                 color="white"
                 fontFamily="mono"
                 fontSize="0.7rem"
@@ -2094,10 +2172,10 @@ export const HomePage = () => {
                 px="2rem"
                 py="0.95rem"
                 borderRadius="3px"
-                _hover={{ bg: "blue.600", transform: "translateY(-2px)" }}
+                _hover={{ bg: submitStatus === "success" ? "green.600" : "blue.600", transform: "translateY(-2px)" }}
                 transition="background 0.32s cubic-bezier(0.4,0,0.2,1), transform 0.32s cubic-bezier(0.4,0,0.2,1)"
               >
-                Send Enquiry →
+                {submitStatus === "success" ? "Enquiry Sent ✓" : "Send Enquiry →"}
               </Button>
             </VStack>
           </Grid>
