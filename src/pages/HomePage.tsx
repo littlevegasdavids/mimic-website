@@ -1068,7 +1068,7 @@ export const HomePage = () => {
                 </HStack>
               </Flex>
 
-              {/* Service - M1 Pro Printing */}
+              {/* Service - M1 Pro Printers */}
               <Flex
                 bg="white"
                 p="2.5rem 2.25rem"
@@ -1098,7 +1098,7 @@ export const HomePage = () => {
                     letterSpacing="0.07em"
                     color="blue.600"
                   >
-                    M1 PRO PRINTING
+                    M1 PRO PRINTERS
                   </Heading>
                 </Flex>
                 <Text
