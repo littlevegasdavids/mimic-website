@@ -155,7 +155,7 @@ const ServiceCard = ({
           fontSize="0.58rem"
           letterSpacing="0.1em"
           textTransform="uppercase"
-          bg="grey.100"
+          bg="bg.lightAlt"
           color="grey.600"
           px="0.6rem"
           py="0.22rem"
@@ -185,7 +185,7 @@ export const ServicesSection = () => {
   const close = () => setActive(null);
 
   return (
-    <Box as="section" id="services" py="16" bg="gray.50">
+    <Box as="section" id="services" py="16" bg="bg.light">
       <Container maxW="1200px">
         <Flex
           justify="space-between"

@@ -77,7 +77,7 @@ export const ContactSection = () => {
     <Box
       as="section"
       id="contact"
-      bg="grey.900"
+      bg="bg.dark"
       py="7rem"
       position="relative"
       overflow="hidden"
@@ -86,7 +86,7 @@ export const ContactSection = () => {
         position: "absolute",
         inset: "0",
         backgroundImage:
-          "linear-gradient(rgba(74,127,165,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(74,127,165,0.04) 1px, transparent 1px)",
+          "linear-gradient(var(--chakra-colors-accent-ghostBg) 1px, transparent 1px), linear-gradient(90deg, var(--chakra-colors-accent-ghostBg) 1px, transparent 1px)",
         backgroundSize: "60px 60px",
       }}
       _after={{
@@ -98,7 +98,7 @@ export const ContactSection = () => {
         h: "500px",
         borderRadius: "50%",
         background:
-          "radial-gradient(circle, rgba(74,127,165,0.08) 0%, transparent 65%)",
+          "radial-gradient(circle, var(--chakra-colors-accent-subtleBg) 0%, transparent 65%)",
         pointerEvents: "none",
       }}
     >
@@ -135,7 +135,7 @@ export const ContactSection = () => {
             </Heading>
             <Text
               fontSize="0.88rem"
-              color="rgba(250,251,252,0.5)"
+              color="fg.subtle"
               fontWeight="300"
               lineHeight="1.85"
               mb="2.5rem"
@@ -256,7 +256,8 @@ export const ContactSection = () => {
                     w="36px"
                     h="36px"
                     flexShrink="0"
-                    border="1px solid rgba(74,127,165,0.3)"
+                    border="1px solid"
+                    borderColor="border.accentStrong"
                     borderRadius="3px"
                     align="center"
                     justify="center"
@@ -270,14 +271,14 @@ export const ContactSection = () => {
                       fontSize="0.57rem"
                       letterSpacing="0.18em"
                       textTransform="uppercase"
-                      color="rgba(250,251,252,0.3)"
+                      color="grey.50/30"
                       mb="2px"
                     >
                       {item.label}
                     </Text>
                     <Text
                       fontSize="0.875rem"
-                      color="rgba(250,251,252,0.7)"
+                      color="fg.muted"
                       fontWeight="300"
                     >
                       {item.value}
@@ -301,7 +302,7 @@ export const ContactSection = () => {
                   fontSize="0.58rem"
                   letterSpacing="0.18em"
                   textTransform="uppercase"
-                  color="rgba(250,251,252,0.35)"
+                  color="fg.faint"
                   mb="0.4rem"
                 >
                   First Name
@@ -310,18 +311,19 @@ export const ContactSection = () => {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  bg="rgba(255,255,255,0.04)"
-                  border="1px solid rgba(74,127,165,0.2)"
+                  bg="input.bg"
+                  border="1px solid"
+                  borderColor="border.accent"
                   borderRadius="3px"
                   color="white"
                   fontFamily="body"
                   fontSize="0.875rem"
                   fontWeight="300"
                   placeholder="Your name"
-                  _placeholder={{ color: "rgba(250,251,252,0.22)" }}
+                  _placeholder={{ color: "input.placeholder" }}
                   _focus={{
                     borderColor: "blue.500",
-                    bg: "rgba(74,127,165,0.06)",
+                    bg: "input.focusBg",
                   }}
                   transition="border-color 0.32s cubic-bezier(0.4,0,0.2,1), background 0.32s cubic-bezier(0.4,0,0.2,1)"
                 />
@@ -332,7 +334,7 @@ export const ContactSection = () => {
                   fontSize="0.58rem"
                   letterSpacing="0.18em"
                   textTransform="uppercase"
-                  color="rgba(250,251,252,0.35)"
+                  color="fg.faint"
                   mb="0.4rem"
                 >
                   Last Name
@@ -341,18 +343,19 @@ export const ContactSection = () => {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  bg="rgba(255,255,255,0.04)"
-                  border="1px solid rgba(74,127,165,0.2)"
+                  bg="input.bg"
+                  border="1px solid"
+                  borderColor="border.accent"
                   borderRadius="3px"
                   color="white"
                   fontFamily="body"
                   fontSize="0.875rem"
                   fontWeight="300"
                   placeholder="Your surname"
-                  _placeholder={{ color: "rgba(250,251,252,0.22)" }}
+                  _placeholder={{ color: "input.placeholder" }}
                   _focus={{
                     borderColor: "blue.500",
-                    bg: "rgba(74,127,165,0.06)",
+                    bg: "input.focusBg",
                   }}
                   transition="border-color 0.32s cubic-bezier(0.4,0,0.2,1), background 0.32s cubic-bezier(0.4,0,0.2,1)"
                 />
@@ -365,7 +368,7 @@ export const ContactSection = () => {
                 fontSize="0.58rem"
                 letterSpacing="0.18em"
                 textTransform="uppercase"
-                color="rgba(250,251,252,0.35)"
+                color="fg.faint"
                 mb="0.4rem"
               >
                 Email Address
@@ -375,18 +378,19 @@ export const ContactSection = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                bg="rgba(255,255,255,0.04)"
-                border="1px solid rgba(74,127,165,0.2)"
+                bg="input.bg"
+                border="1px solid"
+                borderColor="border.accent"
                 borderRadius="3px"
                 color="white"
                 fontFamily="body"
                 fontSize="0.875rem"
                 fontWeight="300"
                 placeholder="you@company.co.za"
-                _placeholder={{ color: "rgba(250,251,252,0.22)" }}
+                _placeholder={{ color: "input.placeholder" }}
                 _focus={{
                   borderColor: "blue.500",
-                  bg: "rgba(74,127,165,0.06)",
+                  bg: "input.focusBg",
                 }}
                 transition="border-color 0.32s cubic-bezier(0.4,0,0.2,1), background 0.32s cubic-bezier(0.4,0,0.2,1)"
               />
@@ -398,7 +402,7 @@ export const ContactSection = () => {
                 fontSize="0.58rem"
                 letterSpacing="0.18em"
                 textTransform="uppercase"
-                color="rgba(250,251,252,0.35)"
+                color="fg.faint"
                 mb="0.4rem"
               >
                 Service Required
@@ -408,10 +412,10 @@ export const ContactSection = () => {
                 value={formData.service}
                 onChange={handleChange}
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(74,127,165,0.2)",
+                  background: "var(--chakra-colors-input-bg)",
+                  border: `1px solid var(--chakra-colors-border-accent)`,
                   borderRadius: "3px",
-                  color: formData.service ? "white" : "rgba(250,251,252,0.4)",
+                  color: formData.service ? "white" : "var(--chakra-colors-fg-subtle)",
                   fontFamily: "DM Sans, sans-serif",
                   fontSize: "0.875rem",
                   fontWeight: 300,
@@ -420,36 +424,36 @@ export const ContactSection = () => {
                   height: "2.5rem",
                 }}
               >
-                <option value="" disabled style={{ background: "#252729" }}>
+                <option value="" disabled style={{ background: "var(--chakra-colors-grey-800)" }}>
                   Select a service…
                 </option>
                 <option
                   value="Mimic Panels"
-                  style={{ background: "#252729", color: "white" }}
+                  style={{ background: "var(--chakra-colors-grey-800)", color: "white" }}
                 >
                   Mimic Panels
                 </option>
                 <option
                   value="Engraving"
-                  style={{ background: "#252729", color: "white" }}
+                  style={{ background: "var(--chakra-colors-grey-800)", color: "white" }}
                 >
                   Engraving
                 </option>
                 <option
                   value="Signage"
-                  style={{ background: "#252729", color: "white" }}
+                  style={{ background: "var(--chakra-colors-grey-800)", color: "white" }}
                 >
                   Signage
                 </option>
                 <option
                   value="M1 Pro Printer"
-                  style={{ background: "#252729", color: "white" }}
+                  style={{ background: "var(--chakra-colors-grey-800)", color: "white" }}
                 >
                   M1 Pro Printers
                 </option>
                 <option
                   value="Other"
-                  style={{ background: "#252729", color: "white" }}
+                  style={{ background: "var(--chakra-colors-grey-800)", color: "white" }}
                 >
                   Other
                 </option>
@@ -462,7 +466,7 @@ export const ContactSection = () => {
                 fontSize="0.58rem"
                 letterSpacing="0.18em"
                 textTransform="uppercase"
-                color="rgba(250,251,252,0.35)"
+                color="fg.faint"
                 mb="0.4rem"
               >
                 Project Details
@@ -471,8 +475,9 @@ export const ContactSection = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                bg="rgba(255,255,255,0.04)"
-                border="1px solid rgba(74,127,165,0.2)"
+                bg="input.bg"
+                border="1px solid"
+                borderColor="border.accent"
                 borderRadius="3px"
                 color="white"
                 fontFamily="body"
@@ -481,10 +486,10 @@ export const ContactSection = () => {
                 minH="115px"
                 resize="vertical"
                 placeholder="Describe your project, quantities, materials or any specific requirements…"
-                _placeholder={{ color: "rgba(250,251,252,0.22)" }}
+                _placeholder={{ color: "input.placeholder" }}
                 _focus={{
                   borderColor: "blue.500",
-                  bg: "rgba(74,127,165,0.06)",
+                  bg: "input.focusBg",
                 }}
                 transition="border-color 0.32s cubic-bezier(0.4,0,0.2,1), background 0.32s cubic-bezier(0.4,0,0.2,1)"
               />

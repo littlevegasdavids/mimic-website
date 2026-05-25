@@ -4,8 +4,9 @@ export const Footer = () => {
   return (
     <Box
       as="footer"
-      bg="#0F1113"
-      borderTop="1px solid rgba(74,127,165,0.1)"
+      bg="bg.dark"
+      borderTop="1px solid"
+      borderColor="border.accentFaint"
       py="2.25rem"
     >
       <Container maxW="1200px">
@@ -13,7 +14,7 @@ export const Footer = () => {
           fontFamily="mono"
           fontSize="xs"
           letterSpacing="0.1em"
-          color="rgba(250,251,252,0.2)"
+          color="fg.ultraFaint"
           textAlign="center"
         >
           Mimic & Engraving Services CC. · Johannesburg, South Africa

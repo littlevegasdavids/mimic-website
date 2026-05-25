@@ -13,7 +13,7 @@ export const CapabilitiesSection = () => (
     as="section"
     id="capabilities"
     py="7rem"
-    bg="#F5F6F7"
+    bg="bg.lightAlt"
     position="relative"
     overflow="hidden"
   >
@@ -23,7 +23,7 @@ export const CapabilitiesSection = () => (
         w="350px"
         h="350px"
         borderRadius="50%"
-        background="radial-gradient(circle, rgba(74,127,165,0.06) 0%, transparent 70%)"
+        background="radial-gradient(circle, var(--chakra-colors-accent-dimBg) 0%, transparent 70%)"
         top="-80px"
         right="-80px"
       />
@@ -32,7 +32,7 @@ export const CapabilitiesSection = () => (
         w="250px"
         h="250px"
         borderRadius="50%"
-        background="radial-gradient(circle, rgba(74,127,165,0.04) 0%, transparent 70%)"
+        background="radial-gradient(circle, var(--chakra-colors-accent-ghostBg) 0%, transparent 70%)"
         bottom="-60px"
         left="-60px"
       />
@@ -48,7 +48,8 @@ export const CapabilitiesSection = () => (
       >
         <Box
           bg="white"
-          border="1px solid rgba(74,127,165,0.1)"
+          border="1px solid"
+          borderColor="border.accentFaint"
           borderRadius="16px"
           p="3rem 2.5rem"
           boxShadow="0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)"
@@ -86,7 +87,7 @@ export const CapabilitiesSection = () => (
             <Text
               as="span"
               css={{
-                background: "linear-gradient(135deg, #4A7FA5 0%, #6BB6FF 100%)",
+                background: `linear-gradient(135deg, var(--chakra-colors-blue-500) 0%, var(--chakra-colors-blue-300) 100%)`,
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -137,7 +138,8 @@ export const CapabilitiesSection = () => (
                 py="1.25rem"
                 px="1rem"
                 borderRadius="8px"
-                borderBottom="1px solid rgba(92,92,92,0.08)"
+                borderBottom="1px solid"
+                borderColor="border.subtle"
                 transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
                 cursor="default"
               >
@@ -148,7 +150,7 @@ export const CapabilitiesSection = () => (
                   bg="blue.500"
                   flexShrink="0"
                   mt="0.58rem"
-                  boxShadow="0 0 0 2px rgba(74,127,165,0.2)"
+                  boxShadow={`0 0 0 2px var(--chakra-colors-accent-lightBg)`}
                 />
                 <Text fontSize="0.9rem" color="grey.900" lineHeight="1.65">
                   <Text as="span" fontWeight="600" color="grey.800">
@@ -163,7 +165,7 @@ export const CapabilitiesSection = () => (
 
         <VStack
           gap="3px"
-          bg="rgba(74,127,165,0.08)"
+          bg="accent.subtleBg"
           borderRadius="16px"
           overflow="hidden"
           boxShadow="0 8px 32px rgba(0,0,0,0.08)"
@@ -221,7 +223,7 @@ export const CapabilitiesSection = () => (
               gap="1.5rem"
               align="flex-start"
               position="relative"
-              _hover={{ bg: "rgba(74,127,165,0.05)", transform: "scale(1.02)" }}
+              _hover={{ bg: "accent.ghostBg", transform: "scale(1.02)" }}
               transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
               _before={{
                 content: '""',
@@ -232,7 +234,7 @@ export const CapabilitiesSection = () => (
                 height: "2px",
                 bg:
                   index === 0
-                    ? "linear-gradient(90deg, transparent, rgba(74,127,165,0.4), transparent)"
+                    ? `linear-gradient(90deg, transparent, var(--chakra-colors-blue-500)/40, transparent)`
                     : "transparent",
               }}
             >
@@ -240,12 +242,12 @@ export const CapabilitiesSection = () => (
                 w="48px"
                 h="48px"
                 flexShrink="0"
-                bg="rgba(74,127,165,0.1)"
+                bg="accent.faintBg"
                 borderRadius="8px"
                 align="center"
                 justify="center"
                 color="blue.600"
-                boxShadow="0 2px 8px rgba(74,127,165,0.15)"
+                boxShadow={`0 2px 8px var(--chakra-colors-border-accentWeak)`}
                 _groupHover={{ bg: "blue.500", color: "white", transform: "scale(1.1)" }}
                 transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
               >

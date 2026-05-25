@@ -22,9 +22,9 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
       left="0"
       right="0"
       zIndex="100"
-      bg="grey.900"
+      bg="bg.dark"
       borderBottom="1px solid"
-      borderColor="rgba(74,127,165,0.18)"
+      borderColor="blue.500/18"
       backdropFilter="blur(8px)"
     >
       <Container maxW="1200px">
@@ -36,7 +36,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
               h="45px"
               objectFit="contain"
             />
-            <Box w="1px" h="28px" bg="rgba(74,127,165,0.35)" />
+            <Box w="1px" h="28px" bg="accent.mediumBg" />
             <VStack gap="1px" align="flex-start">
               <Text
                 fontFamily="heading"
@@ -67,7 +67,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                 fontSize="xs"
                 letterSpacing="0.14em"
                 textTransform="uppercase"
-                color="rgba(250,251,252,0.5)"
+                color="fg.subtle"
                 _hover={{ color: "blue.300" }}
                 transition="color 0.32s cubic-bezier(0.4,0,0.2,1)"
               >
@@ -79,7 +79,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                 fontSize="xs"
                 letterSpacing="0.14em"
                 textTransform="uppercase"
-                color="rgba(250,251,252,0.5)"
+                color="fg.subtle"
                 _hover={{ color: "blue.300" }}
                 transition="color 0.32s cubic-bezier(0.4,0,0.2,1)"
               >
@@ -91,7 +91,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                 fontSize="xs"
                 letterSpacing="0.14em"
                 textTransform="uppercase"
-                color="rgba(250,251,252,0.5)"
+                color="fg.subtle"
                 _hover={{ color: "blue.300" }}
                 transition="color 0.32s cubic-bezier(0.4,0,0.2,1)"
               >
@@ -131,8 +131,9 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                     gap="4"
                     minW="200px"
                     p="4"
-                    bg="grey.900"
-                    border="1px solid rgba(74,127,165,0.3)"
+                    bg="bg.dark"
+                    border="1px solid"
+                    borderColor="border.accentStrong"
                     borderRadius="8px"
                     boxShadow="0 10px 25px rgba(0,0,0,0.4)"
                   >
@@ -140,7 +141,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                       value="services"
                       p="3"
                       borderRadius="4px"
-                      _hover={{ bg: "rgba(74,127,165,0.2)" }}
+                      _hover={{ bg: "accent.lightBg" }}
                       fontSize="0.9rem"
                       fontFamily="mono"
                       letterSpacing="0.1em"
@@ -148,7 +149,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                     >
                       <Link
                         href="#services"
-                        color="rgba(250,251,252,0.8)"
+                        color="grey.50/80"
                         _hover={{ color: "blue.300", textDecoration: "none" }}
                         w="100%"
                         display="block"
@@ -160,7 +161,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                       value="about"
                       p="3"
                       borderRadius="4px"
-                      _hover={{ bg: "rgba(74,127,165,0.2)" }}
+                      _hover={{ bg: "accent.lightBg" }}
                       fontSize="0.9rem"
                       fontFamily="mono"
                       letterSpacing="0.1em"
@@ -168,7 +169,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                     >
                       <Link
                         href="#about"
-                        color="rgba(250,251,252,0.8)"
+                        color="grey.50/80"
                         _hover={{ color: "blue.300", textDecoration: "none" }}
                         w="100%"
                         display="block"
@@ -180,7 +181,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                       value="capabilities"
                       p="3"
                       borderRadius="4px"
-                      _hover={{ bg: "rgba(74,127,165,0.2)" }}
+                      _hover={{ bg: "accent.lightBg" }}
                       fontSize="0.9rem"
                       fontFamily="mono"
                       letterSpacing="0.1em"
@@ -188,7 +189,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                     >
                       <Link
                         href="#capabilities"
-                        color="rgba(250,251,252,0.8)"
+                        color="grey.50/80"
                         _hover={{ color: "blue.300", textDecoration: "none" }}
                         w="100%"
                         display="block"
@@ -205,7 +206,7 @@ export const Navbar = ({ isMobile }: { isMobile: boolean }) => {
                       fontFamily="mono"
                       letterSpacing="0.1em"
                       textTransform="uppercase"
-                      bg="rgba(74,127,165,0.1)"
+                      bg="accent.faintBg"
                     >
                       <Link
                         href="#contact"

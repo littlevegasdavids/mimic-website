@@ -17,7 +17,7 @@ export const HeroSection = () => {
     <>
       <Box
         minH="100vh"
-        bg="grey.900"
+        bg="bg.dark"
         position="relative"
         overflow="hidden"
         display={{ base: "block", lg: "grid" }}
@@ -28,7 +28,7 @@ export const HeroSection = () => {
           <Box
             position="absolute"
             inset="0"
-            backgroundImage="linear-gradient(rgba(74,127,165,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(74,127,165,0.05) 1px, transparent 1px)"
+            backgroundImage="linear-gradient(var(--chakra-colors-accent-ghostBg) 1px, transparent 1px), linear-gradient(90deg, var(--chakra-colors-accent-ghostBg) 1px, transparent 1px)"
             backgroundSize="52px 52px"
           />
           <Box
@@ -36,7 +36,7 @@ export const HeroSection = () => {
             w="600px"
             h="600px"
             borderRadius="50%"
-            background="radial-gradient(circle, rgba(74,127,165,0.12) 0%, transparent 70%)"
+            background="radial-gradient(circle, var(--chakra-colors-accent-glowBg) 0%, transparent 70%)"
             top="-100px"
             right="100px"
           />
@@ -81,7 +81,8 @@ export const HeroSection = () => {
               as="span"
               color="transparent"
               css={{
-                WebkitTextStroke: "1.5px rgba(74,127,165,0.55)",
+                WebkitTextStroke: `1.5px var(--chakra-colors-blue-500)`,
+                opacity: 0.55,
               }}
             >
               SPECIFICATION
@@ -91,7 +92,7 @@ export const HeroSection = () => {
           <Text
             fontSize="0.975rem"
             fontWeight="300"
-            color="rgba(250,251,252,0.55)"
+            color="grey.50/55"
             maxW="440px"
             lineHeight="1.8"
             mb="3rem"
@@ -123,8 +124,8 @@ export const HeroSection = () => {
               as="a"
               //href="#contact"
               variant="outline"
-              borderColor="rgba(74,127,165,0.4)"
-              color="rgba(250,251,252,0.65)"
+              borderColor="blue.500/40"
+              color="grey.50/65"
               fontFamily="mono"
               fontSize="0.7rem"
               letterSpacing="0.14em"
@@ -177,11 +178,12 @@ export const HeroSection = () => {
             <Box
               w="300px"
               h="340px"
-              background="linear-gradient(145deg, #252729, #3A3C3E)"
-              border="1px solid rgba(74,127,165,0.25)"
+              background={`linear-gradient(145deg, var(--chakra-colors-grey-800), var(--chakra-colors-grey-700))`}
+              border="1px solid"
+              borderColor="blue.500/25"
               borderRadius="5px"
               position="relative"
-              boxShadow="0 0 0 1px rgba(74,127,165,0.08), 0 32px 64px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.04)"
+              boxShadow={`0 0 0 1px var(--chakra-colors-accent-subtleBg), 0 32px 64px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.04)`}
               _before={{
                 content: '""',
                 position: "absolute",
@@ -189,7 +191,7 @@ export const HeroSection = () => {
                 left: "14px",
                 right: "14px",
                 bottom: "14px",
-                border: "1px solid rgba(74,127,165,0.12)",
+                border: `1px solid var(--chakra-colors-accent-glowBg)`,
                 borderRadius: "3px",
               }}
             >
@@ -209,14 +211,14 @@ export const HeroSection = () => {
                     key={i}
                     bg={
                       [
-                        "rgba(74,127,165,0.55)",
-                        "rgba(74,127,165,0.25)",
-                        "rgba(74,127,165,0.7)",
-                        "rgba(58,60,62,0.5)",
-                        "rgba(58,60,62,0.35)",
-                        "rgba(36,61,80,0.6)",
-                        "rgba(100,150,184,0.4)",
-                        "rgba(42,45,48,0.4)",
+                        "blue.500/55",
+                        "blue.500/25",
+                        "blue.500/70",
+                        "grey.700/50",
+                        "grey.700/35",
+                        "blue.800/60",
+                        "blue.400/40",
+                        "grey.750/40",
                       ][i % 8]
                     }
                     borderRadius="1px"
@@ -277,8 +279,9 @@ export const HeroSection = () => {
               position="absolute"
               top="20px"
               right="-60px"
-              bg="grey.800"
-              border="1px solid rgba(74,127,165,0.3)"
+              bg="bg.surface"
+              border="1px solid"
+              borderColor="border.accentStrong"
               borderRadius="3px"
               p="0.6rem 0.85rem"
             >
@@ -298,7 +301,7 @@ export const HeroSection = () => {
                 fontSize="0.55rem"
                 letterSpacing="0.14em"
                 textTransform="uppercase"
-                color="rgba(250,251,252,0.35)"
+                color="fg.faint"
                 mt="2px"
               >
                 Years Active
@@ -309,8 +312,9 @@ export const HeroSection = () => {
               position="absolute"
               bottom="40px"
               left="-65px"
-              bg="grey.800"
-              border="1px solid rgba(74,127,165,0.3)"
+              bg="bg.surface"
+              border="1px solid"
+              borderColor="border.accentStrong"
               borderRadius="3px"
               p="0.6rem 0.85rem"
             >
@@ -327,7 +331,7 @@ export const HeroSection = () => {
                 fontSize="0.55rem"
                 letterSpacing="0.14em"
                 textTransform="uppercase"
-                color="rgba(250,251,252,0.35)"
+                color="fg.faint"
                 mt="2px"
               >
                 Services
@@ -362,7 +366,7 @@ export const HeroSection = () => {
               fontSize="0.58rem"
               letterSpacing="0.16em"
               textTransform="uppercase"
-              color="rgba(250,251,252,0.35)"
+              color="fg.faint"
             >
               Years Experience
             </Text>
@@ -382,7 +386,7 @@ export const HeroSection = () => {
               fontSize="0.58rem"
               letterSpacing="0.16em"
               textTransform="uppercase"
-              color="rgba(250,251,252,0.35)"
+              color="fg.faint"
             >
               Core Services
             </Text>
@@ -405,7 +409,7 @@ export const HeroSection = () => {
               fontSize="0.58rem"
               letterSpacing="0.16em"
               textTransform="uppercase"
-              color="rgba(250,251,252,0.35)"
+              color="fg.faint"
             >
               Custom Work
             </Text>
@@ -440,7 +444,7 @@ export const HeroSection = () => {
               fontSize="0.67rem"
               letterSpacing="0.18em"
               textTransform="uppercase"
-              color="rgba(255,255,255,0.85)"
+              color="white/85"
               px="2rem"
               _before={{
                 content: '"◆"',
