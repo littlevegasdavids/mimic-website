@@ -86,7 +86,7 @@ export const ContactSection = () => {
         position: "absolute",
         inset: "0",
         backgroundImage:
-          "linear-gradient(var(--chakra-colors-accent-ghostBg) 1px, transparent 1px), linear-gradient(90deg, var(--chakra-colors-accent-ghostBg) 1px, transparent 1px)",
+          "linear-gradient(rgba(74,127,165,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(74,127,165,0.04) 1px, transparent 1px)",
         backgroundSize: "60px 60px",
       }}
       _after={{
@@ -98,7 +98,7 @@ export const ContactSection = () => {
         h: "500px",
         borderRadius: "50%",
         background:
-          "radial-gradient(circle, var(--chakra-colors-accent-subtleBg) 0%, transparent 65%)",
+          "radial-gradient(circle, rgba(74,127,165,0.08) 0%, transparent 65%)",
         pointerEvents: "none",
       }}
     >
@@ -412,10 +412,10 @@ export const ContactSection = () => {
                 value={formData.service}
                 onChange={handleChange}
                 style={{
-                  background: "var(--chakra-colors-input-bg)",
-                  border: `1px solid var(--chakra-colors-border-accent)`,
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(74,127,165,0.2)",
                   borderRadius: "3px",
-                  color: formData.service ? "white" : "var(--chakra-colors-fg-subtle)",
+                  color: formData.service ? "white" : "rgba(250,251,252,0.5)",
                   fontFamily: "DM Sans, sans-serif",
                   fontSize: "0.875rem",
                   fontWeight: 300,
@@ -424,36 +424,36 @@ export const ContactSection = () => {
                   height: "2.5rem",
                 }}
               >
-                <option value="" disabled style={{ background: "var(--chakra-colors-grey-800)" }}>
+                <option value="" disabled style={{ background: "#252729" }}>
                   Select a service…
                 </option>
                 <option
                   value="Mimic Panels"
-                  style={{ background: "var(--chakra-colors-grey-800)", color: "white" }}
+                  style={{ background: "#252729", color: "white" }}
                 >
                   Mimic Panels
                 </option>
                 <option
                   value="Engraving"
-                  style={{ background: "var(--chakra-colors-grey-800)", color: "white" }}
+                  style={{ background: "#252729", color: "white" }}
                 >
                   Engraving
                 </option>
                 <option
                   value="Signage"
-                  style={{ background: "var(--chakra-colors-grey-800)", color: "white" }}
+                  style={{ background: "#252729", color: "white" }}
                 >
                   Signage
                 </option>
                 <option
                   value="M1 Pro Printer"
-                  style={{ background: "var(--chakra-colors-grey-800)", color: "white" }}
+                  style={{ background: "#252729", color: "white" }}
                 >
                   M1 Pro Printers
                 </option>
                 <option
                   value="Other"
-                  style={{ background: "var(--chakra-colors-grey-800)", color: "white" }}
+                  style={{ background: "#252729", color: "white" }}
                 >
                   Other
                 </option>

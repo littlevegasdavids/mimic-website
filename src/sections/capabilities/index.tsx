@@ -23,7 +23,7 @@ export const CapabilitiesSection = () => (
         w="350px"
         h="350px"
         borderRadius="50%"
-        background="radial-gradient(circle, var(--chakra-colors-accent-dimBg) 0%, transparent 70%)"
+        background="radial-gradient(circle, rgba(74,127,165,0.06) 0%, transparent 70%)"
         top="-80px"
         right="-80px"
       />
@@ -32,7 +32,7 @@ export const CapabilitiesSection = () => (
         w="250px"
         h="250px"
         borderRadius="50%"
-        background="radial-gradient(circle, var(--chakra-colors-accent-ghostBg) 0%, transparent 70%)"
+        background="radial-gradient(circle, rgba(74,127,165,0.05) 0%, transparent 70%)"
         bottom="-60px"
         left="-60px"
       />
@@ -87,7 +87,7 @@ export const CapabilitiesSection = () => (
             <Text
               as="span"
               css={{
-                background: `linear-gradient(135deg, var(--chakra-colors-blue-500) 0%, var(--chakra-colors-blue-300) 100%)`,
+                background: "linear-gradient(135deg, #4A7FA5 0%, #6BB6FF 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -150,7 +150,7 @@ export const CapabilitiesSection = () => (
                   bg="blue.500"
                   flexShrink="0"
                   mt="0.58rem"
-                  boxShadow={`0 0 0 2px var(--chakra-colors-accent-lightBg)`}
+                  boxShadow="0 0 0 2px rgba(74,127,165,0.2)"
                 />
                 <Text fontSize="0.9rem" color="grey.900" lineHeight="1.65">
                   <Text as="span" fontWeight="600" color="grey.800">
@@ -234,7 +234,7 @@ export const CapabilitiesSection = () => (
                 height: "2px",
                 bg:
                   index === 0
-                    ? `linear-gradient(90deg, transparent, var(--chakra-colors-blue-500)/40, transparent)`
+                    ? "linear-gradient(90deg, transparent, rgba(74,127,165,0.4), transparent)"
                     : "transparent",
               }}
             >
@@ -247,7 +247,7 @@ export const CapabilitiesSection = () => (
                 align="center"
                 justify="center"
                 color="blue.600"
-                boxShadow={`0 2px 8px var(--chakra-colors-border-accentWeak)`}
+                boxShadow="0 2px 8px rgba(74,127,165,0.15)"
                 _groupHover={{ bg: "blue.500", color: "white", transform: "scale(1.1)" }}
                 transition="all 0.32s cubic-bezier(0.4,0,0.2,1)"
               >

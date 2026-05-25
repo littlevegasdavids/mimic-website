@@ -28,7 +28,7 @@ export const HeroSection = () => {
           <Box
             position="absolute"
             inset="0"
-            backgroundImage="linear-gradient(var(--chakra-colors-accent-ghostBg) 1px, transparent 1px), linear-gradient(90deg, var(--chakra-colors-accent-ghostBg) 1px, transparent 1px)"
+            backgroundImage="linear-gradient(rgba(74,127,165,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(74,127,165,0.05) 1px, transparent 1px)"
             backgroundSize="52px 52px"
           />
           <Box
@@ -36,7 +36,7 @@ export const HeroSection = () => {
             w="600px"
             h="600px"
             borderRadius="50%"
-            background="radial-gradient(circle, var(--chakra-colors-accent-glowBg) 0%, transparent 70%)"
+            background="radial-gradient(circle, rgba(74,127,165,0.12) 0%, transparent 70%)"
             top="-100px"
             right="100px"
           />
@@ -81,8 +81,7 @@ export const HeroSection = () => {
               as="span"
               color="transparent"
               css={{
-                WebkitTextStroke: `1.5px var(--chakra-colors-blue-500)`,
-                opacity: 0.55,
+                WebkitTextStroke: "1.5px rgba(74,127,165,0.55)",
               }}
             >
               SPECIFICATION
@@ -178,12 +177,12 @@ export const HeroSection = () => {
             <Box
               w="300px"
               h="340px"
-              background={`linear-gradient(145deg, var(--chakra-colors-grey-800), var(--chakra-colors-grey-700))`}
+              background="linear-gradient(145deg, #252729, #3A3C3E)"
               border="1px solid"
               borderColor="blue.500/25"
               borderRadius="5px"
               position="relative"
-              boxShadow={`0 0 0 1px var(--chakra-colors-accent-subtleBg), 0 32px 64px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.04)`}
+              boxShadow="0 0 0 1px rgba(74,127,165,0.08), 0 32px 64px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.04)"
               _before={{
                 content: '""',
                 position: "absolute",
@@ -191,7 +190,7 @@ export const HeroSection = () => {
                 left: "14px",
                 right: "14px",
                 bottom: "14px",
-                border: `1px solid var(--chakra-colors-accent-glowBg)`,
+                border: "1px solid rgba(74,127,165,0.12)",
                 borderRadius: "3px",
               }}
             >

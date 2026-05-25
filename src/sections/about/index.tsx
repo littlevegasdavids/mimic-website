@@ -44,7 +44,7 @@ export const AboutSection = () => (
         w="400px"
         h="400px"
         borderRadius="50%"
-        background="radial-gradient(circle, var(--chakra-colors-accent-subtleBg) 0%, transparent 70%)"
+        background="radial-gradient(circle, rgba(74,127,165,0.08) 0%, transparent 70%)"
         top="-100px"
         left="-100px"
       />
@@ -53,7 +53,7 @@ export const AboutSection = () => (
         w="300px"
         h="300px"
         borderRadius="50%"
-        background="radial-gradient(circle, var(--chakra-colors-accent-dimBg) 0%, transparent 70%)"
+        background="radial-gradient(circle, rgba(74,127,165,0.06) 0%, transparent 70%)"
         bottom="-80px"
         right="-80px"
       />
@@ -99,7 +99,7 @@ export const AboutSection = () => (
               as="span"
               color="blue.400"
               css={{
-                background: `linear-gradient(135deg, var(--chakra-colors-blue-500) 0%, var(--chakra-colors-blue-300) 100%)`,
+                background: "linear-gradient(135deg, #4A7FA5 0%, #6BB6FF 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -167,7 +167,7 @@ export const AboutSection = () => (
                 left: "0",
                 right: "0",
                 height: "2px",
-                bg: `linear-gradient(90deg, transparent, var(--chakra-colors-accent-strongBg), transparent)`,
+                bg: "linear-gradient(90deg, transparent, rgba(74,127,165,0.6), transparent)",
               }}
             >
               <Text
@@ -176,9 +176,9 @@ export const AboutSection = () => (
                 color="blue.400"
                 lineHeight="1"
                 mb="0.5rem"
-                textShadow={`0 2px 8px var(--chakra-colors-border-accentStrong)`}
+                textShadow="0 2px 8px rgba(74,127,165,0.3)"
                 css={{
-                  background: `linear-gradient(135deg, var(--chakra-colors-blue-500) 0%, var(--chakra-colors-blue-300) 100%)`,
+                  background: "linear-gradient(135deg, #4A7FA5 0%, #6BB6FF 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -239,7 +239,7 @@ export const AboutSection = () => (
             >
               <Flex gap="0.3rem" mb="1.25rem">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <FaStar key={i} color="var(--chakra-colors-blue-500)" size={15} />
+                  <FaStar key={i} color="#4A7FA5" size={15} />
                 ))}
               </Flex>
 
